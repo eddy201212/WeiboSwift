@@ -25,6 +25,7 @@
 		64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7320E1E73E00146A40 /* WBStatusViewModel.swift */; };
 		64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7520E1E90300146A40 /* WBStatusPicture.swift */; };
 		64ADAF7820E20F6C00146A40 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7720E20F6C00146A40 /* WBUser.swift */; };
+		64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7920E235C600146A40 /* WBTitleButton.swift */; };
 		64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C299D720D3B7A5008E2327 /* WBVisitorView.swift */; };
 		64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58020D218920017E236 /* UIColor+Extension.swift */; };
 		64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */; };
@@ -60,6 +61,7 @@
 		64ADAF7320E1E73E00146A40 /* WBStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusViewModel.swift; sourceTree = "<group>"; };
 		64ADAF7520E1E90300146A40 /* WBStatusPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusPicture.swift; sourceTree = "<group>"; };
 		64ADAF7720E20F6C00146A40 /* WBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
+		64ADAF7920E235C600146A40 /* WBTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		64C299D720D3B7A5008E2327 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		64D7A58020D218920017E236 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */,
 				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
+				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
 				644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */,
+				64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */,
 				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
 				64DA1A6220D0B85D00B5F654 /* WBMessageViewController.swift in Sources */,
 				64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */,

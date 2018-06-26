@@ -85,7 +85,7 @@ fileprivate extension WBBaseViewController {
 
 extension WBBaseViewController {
     
-    func setUpViews() {
+    @objc func setUpViews() {
         
         view.backgroundColor = UIColor.white
         
