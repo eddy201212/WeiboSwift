@@ -1,0 +1,42 @@
+PODS:
+  - Alamofire (4.6.0)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - Kingfisher (4.6.1)
+  - pop (1.0.10)
+  - SnapKit (4.0.0)
+  - SVProgressHUD (2.2.2)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Alamofire
+  - FMDB
+  - Kingfisher
+  - pop
+  - SnapKit
+  - SVProgressHUD
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - FMDB
+    - Kingfisher
+    - pop
+    - SnapKit
+    - SVProgressHUD
+    - YYModel
+
+SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 634880edce947c5adcc2808e027dfd8f2c2501f9
+
+COCOAPODS: 1.5.3
