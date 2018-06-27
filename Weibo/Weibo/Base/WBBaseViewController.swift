@@ -142,7 +142,7 @@ extension WBBaseViewController {
         navigationBar.tintColor = UIColor.orange
     }
     
-    func setupTableView() {
+    @objc func setupTableView() {
         
         tableView = UITableView(frame: view.bounds, style: .plain)
         view.insertSubview(tableView!, belowSubview: navigationBarContainerView)

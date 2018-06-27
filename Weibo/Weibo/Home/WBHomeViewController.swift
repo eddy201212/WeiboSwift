@@ -82,6 +82,10 @@ extension WBHomeViewController: WBStatusCellDelegate {
     func statusCellDidSelectedURLString(cell: WBStatusCell, urlString: String) {
         
         print("点击的url链接是\(urlString)")
+        
+        let webVC = WBWebViewController()
+        webVC.urlString = urlString
+        navigationController?.pushViewController(webVC, animated: true)
     }
 }
 

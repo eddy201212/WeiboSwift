@@ -13,6 +13,7 @@
 		6412E2C020D8AE84001DDBE4 /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */; };
 		6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */; };
 		6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */; };
+		641A6C2D20E3367B00BB07DF /* WBWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */; };
 		644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */; };
 		64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118820CFCB46002B7E12 /* AppDelegate.swift */; };
 		64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118A20CFCB46002B7E12 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboCommon.swift; sourceTree = "<group>"; };
+		641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBWebViewController.swift; sourceTree = "<group>"; };
 		644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBOAuthViewController.swift; sourceTree = "<group>"; };
 		64A1118520CFCB46002B7E12 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A1118820CFCB46002B7E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */,
 				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
 				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
+				641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
 				64DA1A6220D0B85D00B5F654 /* WBMessageViewController.swift in Sources */,
 				64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */,
+				641A6C2D20E3367B00BB07DF /* WBWebViewController.swift in Sources */,
 				64A1119B20CFD58E002B7E12 /* WBBaseViewController.swift in Sources */,
 				64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */,
 				64DA1A6020D0B84800B5F654 /* WBHomeViewController.swift in Sources */,
