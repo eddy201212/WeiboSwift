@@ -21,7 +21,6 @@ class WBStatusViewModel: CustomStringConvertible {
     var commentStr: String?
     var likeStr: String?
     
-    var statusAttrText: NSAttributedString?
     var retweetedAttrText: NSAttributedString?
     
     var pictureViewSize = CGSize()
@@ -58,6 +57,15 @@ class WBStatusViewModel: CustomStringConvertible {
         likeStr = countString(count: model.attitudes_count, defaultStr: "赞")
         
         pictureViewSize = calPictureViewSize(count: model.pic_urls?.count)
+        
+        let originalFont = UIFont.systemFont(ofSize: 15)
+        let retweetedFont = UIFont.systemFont(ofSize: 14)
+        
+        statusAttrText = NSMutableAttributedString(string: model.text ?? "")
+        statusAttrText?.addAttributes([NSAttributedStringKey.font: originalFont], range: NSRange(location: 0, length: (statusAttrText?.length)!))
+        
+        //FIXME:
+//        var rText = "@" +
     }
     
     func countString(count: Int, defaultStr: String) -> String {
