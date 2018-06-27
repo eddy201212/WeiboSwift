@@ -21,6 +21,7 @@ class WBStatusViewModel: CustomStringConvertible {
     var commentStr: String?
     var likeStr: String?
     
+    var statusAttrText: NSMutableAttributedString?
     var retweetedAttrText: NSAttributedString?
     
     var pictureViewSize = CGSize()
@@ -29,7 +30,7 @@ class WBStatusViewModel: CustomStringConvertible {
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
     
-    var rowHeight: CGFloat = 0
+    var rowHeight: CGFloat = 44
     
     init(model: WBStatus) {
         
