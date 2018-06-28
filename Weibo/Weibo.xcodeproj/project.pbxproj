@@ -10,6 +10,7 @@
 		5D96E1A3AD0CCF664F03F63A /* Pods_Weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1DB502D44F86724B18694 /* Pods_Weibo.framework */; };
 		6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08120DCF39F00ADA004 /* WBStatus.swift */; };
 		6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08320DCFDC800ADA004 /* Date+Extension.swift */; };
+		640E1A0820E47FEC00A2140F /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */; };
 		6412E2C020D8AE84001DDBE4 /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */; };
 		6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */; };
 		6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */; };
@@ -47,6 +48,7 @@
 		63A1DB502D44F86724B18694 /* Pods_Weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6408A08120DCF39F00ADA004 /* WBStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		6408A08320DCFDC800ADA004 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
 		6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboCommon.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
 				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
 				641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */,
+				640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
+				640E1A0820E47FEC00A2140F /* WBStatusNormalCell.xib in Resources */,
 				64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */,
 				64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */,
 			);

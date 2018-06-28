@@ -30,7 +30,7 @@ class WBStatusViewModel: CustomStringConvertible {
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
     
-    var rowHeight: CGFloat = 44
+    var rowHeight: CGFloat = 300
     
     init(model: WBStatus) {
         
@@ -60,7 +60,7 @@ class WBStatusViewModel: CustomStringConvertible {
         pictureViewSize = calPictureViewSize(count: model.pic_urls?.count)
         
         let originalFont = UIFont.systemFont(ofSize: 15)
-        let retweetedFont = UIFont.systemFont(ofSize: 14)
+        //let retweetedFont = UIFont.systemFont(ofSize: 14)
         
         statusAttrText = NSMutableAttributedString(string: model.text ?? "")
         statusAttrText?.addAttributes([NSAttributedStringKey.font: originalFont], range: NSRange(location: 0, length: (statusAttrText?.length)!))

@@ -14,7 +14,7 @@ class WBUser: NSObject {
     @objc var id: Int64 = 0
     
     //用户昵称
-    @objc var scrren_name: String?
+    @objc var screen_name: String?
     
     //用户头像 50*50
     @objc var profile_image_url: String?
