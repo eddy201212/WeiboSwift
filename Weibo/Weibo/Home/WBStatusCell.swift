@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 /**
  如果需要设置可选协议方法
@@ -32,6 +33,8 @@ class WBStatusCell: UITableViewCell {
             memberIconView.image = viewModel?.memberIcon
             vipIconView.image = viewModel?.vipIcon
             
+            iconView.wb_setImage(urlString: viewModel?.status.user?.profile_image_url, placeholderImage: UIImage(named: "avatar_default_big"), isAvatar: true)
+            
             
         }
     }
@@ -55,4 +58,18 @@ class WBStatusCell: UITableViewCell {
     //底部工具栏
     @IBOutlet weak var toolbar: UIView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        // 离屏渲染 － 异步绘制
+        self.layer.drawsAsynchronously = true
+        
+        // 栅格话 － 异步会址之后，会生出一张独立的图像，cell在屏幕上滚动的时候，本质上滚动的是这张图片
+        // cell 优化，要尽量减少图层的数量，相当于就只有一层
+        // 停止滚动之后，可以接收监听
+        self.layer.shouldRasterize = true
+        
+        // 使用 ‘栅格化’ 必须注意指定分辨率
+        self.layer.rasterizationScale = UIScreen.main.scale
+    }
 }

@@ -11,6 +11,8 @@
 		6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08120DCF39F00ADA004 /* WBStatus.swift */; };
 		6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08320DCFDC800ADA004 /* Date+Extension.swift */; };
 		640E1A0820E47FEC00A2140F /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */; };
+		640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */; };
+		640E1A0C20E4C4B500A2140F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */; };
 		6412E2C020D8AE84001DDBE4 /* WBNetworkManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */; };
 		6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */; };
 		6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */; };
@@ -49,6 +51,8 @@
 		6408A08120DCF39F00ADA004 /* WBStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		6408A08320DCFDC800ADA004 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
+		640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SDWebImage.swift"; sourceTree = "<group>"; };
+		640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		6412E2BF20D8AE84001DDBE4 /* WBNetworkManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WBNetworkManager+Extension.swift"; sourceTree = "<group>"; };
 		6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBUserAccount.swift; sourceTree = "<group>"; };
 		6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeiboCommon.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 				64D7A58020D218920017E236 /* UIColor+Extension.swift */,
 				64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */,
 				6408A08320DCFDC800ADA004 /* Date+Extension.swift */,
+				640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */,
+				640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -405,6 +411,7 @@
 				6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */,
 				641A6C2F20E33AFC00BB07DF /* WBStatusListViewModel.swift in Sources */,
 				64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */,
+				640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */,
 				6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */,
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
@@ -424,6 +431,7 @@
 				64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */,
 				6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */,
 				6412E2C020D8AE84001DDBE4 /* WBNetworkManager+Extension.swift in Sources */,
+				640E1A0C20E4C4B500A2140F /* UIImage+Extension.swift in Sources */,
 				64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */,
 				64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */,
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
