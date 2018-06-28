@@ -70,12 +70,71 @@
                             <constraint firstAttribute="height" constant="10" id="WoI-FY-60k"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-oJ-XEn">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-oJ-XEn" customClass="WBStatusToolBar" customModule="Weibo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="119" width="375" height="35"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEt-lQ-BeP">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="转发" image="timeline_icon_retweet">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3h-kp-W20">
+                                <rect key="frame" x="125" y="0.0" width="125" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="评论" image="timeline_icon_comment">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ju-zK-GP8">
+                                <rect key="frame" x="250" y="0.0" width="125" height="35"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="赞" image="timeline_icon_unlike">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline_card_bottom_line" highlightedImage="timeline_card_bottom_line_highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="Vsa-xi-lD6">
+                                <rect key="frame" x="125" y="7" width="1" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="UNO-m9-XEo"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timeline_card_bottom_line" highlightedImage="timeline_card_bottom_line_highlighted" translatesAutoresizingMaskIntoConstraints="NO" id="Mlb-R9-ubF">
+                                <rect key="frame" x="249" y="7.5" width="1" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="m1n-SH-WX2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2ju-zK-GP8" secondAttribute="bottom" id="0eu-5x-X1Y"/>
+                            <constraint firstItem="e3h-kp-W20" firstAttribute="leading" secondItem="iEt-lQ-BeP" secondAttribute="trailing" id="3fc-Ue-tjO"/>
+                            <constraint firstItem="iEt-lQ-BeP" firstAttribute="top" secondItem="KNB-oJ-XEn" secondAttribute="top" id="HzD-6M-hsp"/>
+                            <constraint firstItem="Vsa-xi-lD6" firstAttribute="centerY" secondItem="iEt-lQ-BeP" secondAttribute="centerY" id="IiR-PH-cgG"/>
                             <constraint firstAttribute="height" constant="35" id="JG3-t9-juo"/>
+                            <constraint firstItem="Mlb-R9-ubF" firstAttribute="centerY" secondItem="2ju-zK-GP8" secondAttribute="centerY" id="KAF-Fr-IvA"/>
+                            <constraint firstItem="2ju-zK-GP8" firstAttribute="leading" secondItem="Mlb-R9-ubF" secondAttribute="trailing" id="KOj-X8-n71"/>
+                            <constraint firstItem="e3h-kp-W20" firstAttribute="width" secondItem="iEt-lQ-BeP" secondAttribute="width" id="QU3-B2-oBf"/>
+                            <constraint firstItem="e3h-kp-W20" firstAttribute="top" secondItem="KNB-oJ-XEn" secondAttribute="top" id="VBL-5J-LJ8"/>
+                            <constraint firstItem="2ju-zK-GP8" firstAttribute="width" secondItem="iEt-lQ-BeP" secondAttribute="width" id="Vq1-I5-PjY"/>
+                            <constraint firstItem="2ju-zK-GP8" firstAttribute="top" secondItem="KNB-oJ-XEn" secondAttribute="top" id="WkU-U9-NfK"/>
+                            <constraint firstAttribute="trailing" secondItem="2ju-zK-GP8" secondAttribute="trailing" id="gN8-GX-YD9"/>
+                            <constraint firstAttribute="bottom" secondItem="iEt-lQ-BeP" secondAttribute="bottom" id="iJz-BW-jwn"/>
+                            <constraint firstItem="Vsa-xi-lD6" firstAttribute="leading" secondItem="iEt-lQ-BeP" secondAttribute="trailing" id="pcM-TJ-BZF"/>
+                            <constraint firstAttribute="bottom" secondItem="e3h-kp-W20" secondAttribute="bottom" id="qxp-Yg-43D"/>
+                            <constraint firstItem="iEt-lQ-BeP" firstAttribute="leading" secondItem="KNB-oJ-XEn" secondAttribute="leading" id="rUq-SC-Fy0"/>
+                            <constraint firstItem="2ju-zK-GP8" firstAttribute="leading" secondItem="e3h-kp-W20" secondAttribute="trailing" id="rzL-b9-9mj"/>
                         </constraints>
+                        <connections>
+                            <outlet property="commentButton" destination="e3h-kp-W20" id="mMV-Cb-XVz"/>
+                            <outlet property="likeButton" destination="2ju-zK-GP8" id="RC3-hA-5OI"/>
+                            <outlet property="retweetedButton" destination="iEt-lQ-BeP" id="ogF-vg-0ju"/>
+                        </connections>
                     </view>
                 </subviews>
                 <constraints>
@@ -122,5 +181,10 @@
     <resources>
         <image name="avatar_vip" width="14" height="14"/>
         <image name="common_icon_membership" width="14" height="14"/>
+        <image name="timeline_card_bottom_line" width="1" height="1"/>
+        <image name="timeline_card_bottom_line_highlighted" width="1" height="36"/>
+        <image name="timeline_icon_comment" width="18" height="18"/>
+        <image name="timeline_icon_retweet" width="18" height="18"/>
+        <image name="timeline_icon_unlike" width="18" height="18"/>
     </resources>
 </document>

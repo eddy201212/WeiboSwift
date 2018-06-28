@@ -35,7 +35,7 @@ class WBStatusCell: UITableViewCell {
             
             iconView.wb_setImage(urlString: viewModel?.status.user?.profile_image_url, placeholderImage: UIImage(named: "avatar_default_big"), isAvatar: true)
             
-            
+            toolbar.viewModel = viewModel
         }
     }
     
@@ -56,7 +56,7 @@ class WBStatusCell: UITableViewCell {
     //图片视图
     @IBOutlet weak var pictureView: UIView!
     //底部工具栏
-    @IBOutlet weak var toolbar: UIView!
+    @IBOutlet weak var toolbar: WBStatusToolBar!
     
     override func awakeFromNib() {
         super.awakeFromNib()
