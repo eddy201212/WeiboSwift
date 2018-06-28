@@ -15,5 +15,6 @@ pod 'SVProgressHUD'
 pod 'Kingfisher'
 pod 'pop'
 pod 'FMDB'
+pod 'SDWebImage'
 
 end
