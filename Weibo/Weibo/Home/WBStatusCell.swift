@@ -28,6 +28,7 @@ class WBStatusCell: UITableViewCell {
         
         didSet {
             statusLabel.attributedText = viewModel?.statusAttrText
+            retweetedLabel?.attributedText = viewModel?.retweetedAttrText
             
             nameLabel.text = viewModel?.status.user?.screen_name
             memberIconView.image = viewModel?.memberIcon
@@ -37,6 +38,7 @@ class WBStatusCell: UITableViewCell {
             
             toolbar.viewModel = viewModel
             pictureView.viewModel = viewModel
+            
         }
     }
     
@@ -58,6 +60,8 @@ class WBStatusCell: UITableViewCell {
     @IBOutlet weak var pictureView: WBStatusPictureView!
     //底部工具栏
     @IBOutlet weak var toolbar: WBStatusToolBar!
+    //转发微博正文
+    @IBOutlet weak var retweetedLabel: UILabel?
     
     override func awakeFromNib() {
         super.awakeFromNib()

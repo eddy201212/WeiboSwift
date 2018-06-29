@@ -22,11 +22,13 @@ class WBStatusViewModel: CustomStringConvertible {
     var likeStr: String?
     
     var statusAttrText: NSMutableAttributedString?
-    var retweetedAttrText: NSAttributedString?
+    var retweetedAttrText: NSMutableAttributedString?
     
     var pictureViewSize = CGSize()
     
+    // 如果是被转发的微博，原创微博肯定没有图
     var picURLs: [WBStatusPicture]? {
+        // 如果有被转发的微博，返回被转发微博的配图
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
     
@@ -57,16 +59,23 @@ class WBStatusViewModel: CustomStringConvertible {
         commentStr = countString(count: model.comments_count, defaultStr: "评论")
         likeStr = countString(count: model.attitudes_count, defaultStr: "赞")
         
-        pictureViewSize = calPictureViewSize(count: model.pic_urls?.count)
+        pictureViewSize = calPictureViewSize(count: picURLs?.count)
         
         let originalFont = UIFont.systemFont(ofSize: 15)
-        //let retweetedFont = UIFont.systemFont(ofSize: 14)
+        let retweetedFont = UIFont.systemFont(ofSize: 14)
         
         statusAttrText = NSMutableAttributedString(string: model.text ?? "")
         statusAttrText?.addAttributes([NSAttributedStringKey.font: originalFont], range: NSRange(location: 0, length: (statusAttrText?.length)!))
         
-        //FIXME:
-//        var rText = "@" +
+        let screenName = status.retweeted_status?.user?.screen_name
+        let retweeted_status_text = status.retweeted_status?.text
+        
+        var rText = "@" + (screenName ?? "")
+        rText = rText + ":" + (retweeted_status_text ?? "")
+        
+        
+        retweetedAttrText = NSMutableAttributedString(string: rText)
+        retweetedAttrText?.addAttributes([NSAttributedStringKey.font: retweetedFont], range: NSRange(location: 0, length: (retweetedAttrText?.length)!))
         
         updateRowHeight()
     }
@@ -96,15 +105,15 @@ class WBStatusViewModel: CustomStringConvertible {
         }
         
         //判断是否是转发微博
-//        if status.retweeted_status != nil {
-//
-//            height += 2 * margin
-//
-//            //转发微博的高度
-//            if let text = retweetedAttrText {
-//                height += text.boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], context: nil).height
-//            }
-//        }
+        if status.retweeted_status != nil {
+
+            height += 2 * margin
+
+            //转发微博的高度
+            if let text = retweetedAttrText {
+                height += text.boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], context: nil).height
+            }
+        }
         
         height += pictureViewSize.height
         height += margin

@@ -10,7 +10,7 @@
 		5D96E1A3AD0CCF664F03F63A /* Pods_Weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1DB502D44F86724B18694 /* Pods_Weibo.framework */; };
 		6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08120DCF39F00ADA004 /* WBStatus.swift */; };
 		6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08320DCFDC800ADA004 /* Date+Extension.swift */; };
-		640E1A0820E47FEC00A2140F /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */; };
+		640E1A0820E47FEC00A2140F /* WBStatusRetweetedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 640E1A0720E47FEC00A2140F /* WBStatusRetweetedCell.xib */; };
 		640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */; };
 		640E1A0C20E4C4B500A2140F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */; };
 		640E1A0E20E4CC6400A2140F /* WBStatusToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640E1A0D20E4CC6400A2140F /* WBStatusToolBar.swift */; };
@@ -46,13 +46,14 @@
 		64DA1A7120D0F90C00B5F654 /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = 64DA1A7020D0F90C00B5F654 /* main.json */; };
 		64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */; };
 		64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */; };
+		64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63A1DB502D44F86724B18694 /* Pods_Weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6408A08120DCF39F00ADA004 /* WBStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		6408A08320DCFDC800ADA004 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
+		640E1A0720E47FEC00A2140F /* WBStatusRetweetedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusRetweetedCell.xib; sourceTree = "<group>"; };
 		640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+SDWebImage.swift"; sourceTree = "<group>"; };
 		640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		640E1A0D20E4CC6400A2140F /* WBStatusToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusToolBar.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		64DA1A7020D0F90C00B5F654 /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = main.json; sourceTree = "<group>"; };
 		64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
 		92AC53811D27D9D552DF496B /* Pods-Weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.release.xcconfig"; sourceTree = "<group>"; };
 		D0C31826F36A1AD21C831A87 /* Pods-Weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,7 +197,8 @@
 				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
 				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
 				641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */,
-				640E1A0720E47FEC00A2140F /* WBStatusNormalCell.xib */,
+				640E1A0720E47FEC00A2140F /* WBStatusRetweetedCell.xib */,
+				64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */,
 				640E1A0D20E4CC6400A2140F /* WBStatusToolBar.swift */,
 				640E1A0F20E4D93E00A2140F /* WBStatusPictureView.swift */,
 			);
@@ -344,7 +347,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
-				640E1A0820E47FEC00A2140F /* WBStatusNormalCell.xib in Resources */,
+				640E1A0820E47FEC00A2140F /* WBStatusRetweetedCell.xib in Resources */,
+				64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */,
 				64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */,
 				64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */,
 			);

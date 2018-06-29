@@ -50,11 +50,11 @@ extension WBHomeViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: originalCellId, for: indexPath) as! WBStatusCell
-        
         let vm = listViewModel.statusList[indexPath.row]
-        cell.viewModel = vm
+        let cellId = (vm.status.retweeted_status != nil) ? retweetedCellId : originalCellId
         
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! WBStatusCell
+        cell.viewModel = vm
         
         return cell
     }
