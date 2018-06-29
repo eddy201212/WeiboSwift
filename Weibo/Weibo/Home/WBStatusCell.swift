@@ -36,6 +36,7 @@ class WBStatusCell: UITableViewCell {
             iconView.wb_setImage(urlString: viewModel?.status.user?.profile_image_url, placeholderImage: UIImage(named: "avatar_default_big"), isAvatar: true)
             
             toolbar.viewModel = viewModel
+            pictureView.viewModel = viewModel
         }
     }
     
@@ -54,7 +55,7 @@ class WBStatusCell: UITableViewCell {
     //微博正文
     @IBOutlet weak var statusLabel: UILabel!
     //图片视图
-    @IBOutlet weak var pictureView: UIView!
+    @IBOutlet weak var pictureView: WBStatusPictureView!
     //底部工具栏
     @IBOutlet weak var toolbar: WBStatusToolBar!
     

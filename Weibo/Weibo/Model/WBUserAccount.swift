@@ -26,7 +26,7 @@ class WBUserAccount: NSObject {
     @objc var screen_name: String?
     @objc var avatar_large: String?
     
-    override var description: String {
+    @objc override var description: String {
         return yy_modelDescription()
     }
     

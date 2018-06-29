@@ -63,12 +63,15 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wED-bu-qAr">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wED-bu-qAr" customClass="WBStatusPictureView" customModule="Weibo" customModuleProvider="target">
                         <rect key="frame" x="12" y="97" width="351" height="10"/>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.28235294119999998" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="10" id="WoI-FY-60k"/>
                         </constraints>
+                        <connections>
+                            <outlet property="heightCons" destination="WoI-FY-60k" id="eec-FD-MrC"/>
+                        </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KNB-oJ-XEn" customClass="WBStatusToolBar" customModule="Weibo" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="119" width="375" height="35"/>
