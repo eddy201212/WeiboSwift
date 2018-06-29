@@ -30,7 +30,7 @@ class WBStatusViewModel: CustomStringConvertible {
         return status.retweeted_status?.pic_urls ?? status.pic_urls
     }
     
-    var rowHeight: CGFloat = 300
+    var rowHeight: CGFloat = 0
     
     init(model: WBStatus) {
         
@@ -67,6 +67,50 @@ class WBStatusViewModel: CustomStringConvertible {
         
         //FIXME:
 //        var rText = "@" +
+        
+        updateRowHeight()
+    }
+    
+    // 根据当前视图模型内容计算行高
+    func updateRowHeight() {
+        
+        // 原创微博：顶部分隔视图(12) ＋ 间距(12) ＋ 图片的高度(34) ＋ 间距(12) ＋ 正文高度(需要计算) ＋ 配图视图(高度需要计算) ＋ 间距(12) ＋ 底部视图高度(35)
+        
+        // 被转发微博：顶部分隔视图(12) ＋ 间距(12) ＋ 图片的高度(34) ＋ 间距(12) ＋ 正文高度(需要计算) ＋ 间距(12) ＋ 间距(12) ＋ 转发文本(高度需要计算) ＋ 配图视图(高度需要计算) ＋ 间距(12) ＋ 底部视图高度(35)
+        
+        let margin: CGFloat = 12
+        let iconHeight: CGFloat = 34
+        let toolbarHeight: CGFloat = 35
+        
+        var height: CGFloat = 0
+        
+        let viewSize = CGSize(width: UIScreen.main.bounds.width - 2 * margin, height: CGFloat(MAXFLOAT))
+        
+        height = 2 * margin + iconHeight + margin
+        
+        //正文高度
+        if let text = statusAttrText {
+            
+            // usesLineFragmentOrigin：换行文本，统一使用
+            height += text.boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], context: nil).height
+        }
+        
+        //判断是否是转发微博
+//        if status.retweeted_status != nil {
+//
+//            height += 2 * margin
+//
+//            //转发微博的高度
+//            if let text = retweetedAttrText {
+//                height += text.boundingRect(with: viewSize, options: [.usesLineFragmentOrigin], context: nil).height
+//            }
+//        }
+        
+        height += pictureViewSize.height
+        height += margin
+        height += toolbarHeight
+        
+        rowHeight = height
     }
     
     func countString(count: Int, defaultStr: String) -> String {

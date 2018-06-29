@@ -84,9 +84,9 @@ extension WBStatusPictureView {
     
     @objc func tapAction(tapGesture: UITapGestureRecognizer) {
         
-        let iv = tapGesture.view
+        //let iv = tapGesture.view
         
-        print(iv)
+        //print(iv)
     }
 }
 
@@ -95,7 +95,7 @@ extension WBStatusPictureView {
     func setupUI() {
         
         backgroundColor = superview?.backgroundColor
-        clipsToBounds = false
+        clipsToBounds = true
         
         let count = 3
         let rect = CGRect(x: 0, y: WBStatusPictureViewOutterMargin, width: WBStatusPictureItemWidth, height: WBStatusPictureItemWidth)
@@ -103,7 +103,7 @@ extension WBStatusPictureView {
         for i in 0..<count * count {
             
             let row = CGFloat(i / 3)//当前行
-            let col = CGFloat(count % 3)//当前列
+            let col = CGFloat(i % 3)//当前列
             
             let xOffset = row * (WBStatusPictureItemWidth + WBStatusPictureViewInnerMargin)
             let yOffset = col * (WBStatusPictureItemWidth + WBStatusPictureViewInnerMargin)
@@ -115,8 +115,6 @@ extension WBStatusPictureView {
             iv.clipsToBounds = true
             iv.tag = i
             addSubview(iv)
-            
-            iv.backgroundColor = UIColor.red
             
             addGifView(iv:iv)
             
