@@ -122,6 +122,54 @@ class WBStatusViewModel: CustomStringConvertible {
         rowHeight = height
     }
     
+    /// 使用单个图像，更新配图视图的大小
+    ///
+    /// 新浪针对单张图片，都是缩略图，但是偶尔会有一张特别大的图 7000 * 9000 多
+    /// 新浪微博，为了鼓励原创，支持`长微博`，但是有的时候，有特别长的微博，长到宽度只有1个点
+    ///
+    /// - parameter image: 网路缓存的单张图像
+    func updateSingleImageSize(image: UIImage) {
+        
+        var size = image.size
+        
+        let maxWidth: CGFloat = 200
+        let minWidth: CGFloat = 40
+        
+        // 过宽图像处理
+        if size.width > maxWidth {
+            // 设置最大宽度
+            size.width = 200
+            // 等比例调整高度
+            size.height = size.width * image.size.height / image.size.width
+        }
+        
+        // 过窄图像处理
+        if size.width < minWidth {
+            size.width = minWidth
+            
+            // 要特殊处理高度，否则高度太大，会印象用户体验
+            size.height = size.width * image.size.height / image.size.width / 4
+        }
+        
+        // 过高图片处理，图片填充模式就是 scaleToFill，高度减小，会自动裁切
+        if size.height > 200 {
+            size.height = 200
+        }
+        
+        // 特例：有些图像，本身就是很窄，很长！-> 定义一个 minHeight，思路同上！
+        // 在工作中，如果看到代码中有些疑惑的分支处理！千万不要动！
+        
+        // 注意，尺寸需要增加顶部的 12 个点，便于布局
+        size.height += WBStatusPictureViewOutterMargin
+        
+        // 重新设置配图视图大小
+        pictureViewSize = size
+        
+        // 更新行高
+        updateRowHeight()
+    }
+    
+    
     func countString(count: Int, defaultStr: String) -> String {
         
         if count == 0 {
