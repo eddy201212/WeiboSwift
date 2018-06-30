@@ -15,9 +15,20 @@ class WBHomeViewController: WBBaseViewController {
 
     fileprivate lazy var listViewModel = WBStatusListViewModel()
     
-    override func loadData() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        print("加载……")
+        setUpViews()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(browserPhoto), name: NSNotification.Name(WBStatusCellBrowserPhotoNotificaiton), object: nil)
+    }
+    
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    override func loadData() {
         
         listViewModel.loadStatus(pullup: self.isPullup) { (isSuccess, shouldRefresh) in
             
@@ -33,12 +44,22 @@ class WBHomeViewController: WBBaseViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        setUpViews()
-    }
     
+    /// 浏览照片通知监听方法
+    @objc fileprivate func browserPhoto(n: Notification) {
+        
+        // 1. 从 通知的 userInfo 提取参数
+        guard let urls = n.userInfo?[WBStatusCellBrowserPhotoURLsKey] as? [String],
+        let selectedIndex = n.userInfo?[WBStatusCellBrowserPhotoSelectedIndexKey] as? Int,
+        let imageViewList = n.userInfo?[WBStatusCellBrowserPhotoImageViewKey] as? [UIImageView]
+        else {
+            return
+        }
+        
+        // 2. 展现照片浏览控制器
+        let vc = HMPhotoBrowserController.photoBrowser(withSelectedIndex: selectedIndex, urls: urls, parentImageViews: imageViewList)
+        present(vc, animated: true, completion: nil)
+    }
 }
 
 extension WBHomeViewController {

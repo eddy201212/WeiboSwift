@@ -47,6 +47,11 @@
 		64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */; };
 		64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */; };
 		64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */; };
+		8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */; };
+		8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */; };
+		8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */; };
+		8D5FBE8520E72E4000B5966D /* HMPhotoProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7B20E72E4000B5966D /* HMPhotoProgressView.m */; };
+		8D5FBE8620E72E4000B5966D /* HMPhotoBrowserAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE8020E72E4000B5966D /* HMPhotoBrowserAnimator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +97,17 @@
 		64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
+		8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserController.m; sourceTree = "<group>"; };
+		8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoViewerController.m; sourceTree = "<group>"; };
+		8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserPhotos.m; sourceTree = "<group>"; };
+		8D5FBE7B20E72E4000B5966D /* HMPhotoProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoProgressView.m; sourceTree = "<group>"; };
+		8D5FBE7C20E72E4000B5966D /* HMPhotoBrowserAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserAnimator.h; sourceTree = "<group>"; };
+		8D5FBE7D20E72E4000B5966D /* HMPhotoBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserController.h; sourceTree = "<group>"; };
+		8D5FBE7E20E72E4000B5966D /* HMPhotoViewerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoViewerController.h; sourceTree = "<group>"; };
+		8D5FBE7F20E72E4000B5966D /* HMPhotoBrowserPhotos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoBrowserPhotos.h; sourceTree = "<group>"; };
+		8D5FBE8020E72E4000B5966D /* HMPhotoBrowserAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserAnimator.m; sourceTree = "<group>"; };
+		8D5FBE8120E72E4000B5966D /* HMPhotoProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMPhotoProgressView.h; sourceTree = "<group>"; };
+		8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Weibo-Bridge.h"; sourceTree = "<group>"; };
 		92AC53811D27D9D552DF496B /* Pods-Weibo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.release.xcconfig"; sourceTree = "<group>"; };
 		D0C31826F36A1AD21C831A87 /* Pods-Weibo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weibo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Weibo/Pods-Weibo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +166,7 @@
 		64A1118720CFCB46002B7E12 /* Weibo */ = {
 			isa = PBXGroup;
 			children = (
+				8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */,
 				64A1118820CFCB46002B7E12 /* AppDelegate.swift */,
 				64A1118A20CFCB46002B7E12 /* ViewController.swift */,
 				64C299D720D3B7A5008E2327 /* WBVisitorView.swift */,
@@ -160,6 +177,7 @@
 				64A111A520CFDBE6002B7E12 /* Discover */,
 				64DA1A5E20D0B4C300B5F654 /* Me */,
 				64DA1A6A20D0C87A00B5F654 /* Toos */,
+				8DF48BA420E68FD7006E1DD1 /* Vender */,
 				64A111A120CFD6B3002B7E12 /* Base */,
 				6412E2C220D8AF87001DDBE4 /* ViewModel */,
 				6412E2C120D8AF7F001DDBE4 /* Model */,
@@ -278,6 +296,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D5FBE7720E72E4000B5966D /* PhotoBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */,
+				8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */,
+				8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */,
+				8D5FBE7B20E72E4000B5966D /* HMPhotoProgressView.m */,
+				8D5FBE7C20E72E4000B5966D /* HMPhotoBrowserAnimator.h */,
+				8D5FBE7D20E72E4000B5966D /* HMPhotoBrowserController.h */,
+				8D5FBE7E20E72E4000B5966D /* HMPhotoViewerController.h */,
+				8D5FBE7F20E72E4000B5966D /* HMPhotoBrowserPhotos.h */,
+				8D5FBE8020E72E4000B5966D /* HMPhotoBrowserAnimator.m */,
+				8D5FBE8120E72E4000B5966D /* HMPhotoProgressView.h */,
+			);
+			path = PhotoBrowser;
+			sourceTree = "<group>";
+		};
+		8DF48BA420E68FD7006E1DD1 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				8D5FBE7720E72E4000B5966D /* PhotoBrowser */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
 		A8B3E73C1A934F645F6C2030 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -314,6 +357,7 @@
 		64A1117D20CFCB45002B7E12 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WB;
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = WB;
@@ -425,7 +469,9 @@
 				6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */,
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
+				8D5FBE8520E72E4000B5966D /* HMPhotoProgressView.m in Sources */,
 				644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */,
+				8D5FBE8620E72E4000B5966D /* HMPhotoBrowserAnimator.m in Sources */,
 				64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */,
 				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
 				64DA1A6220D0B85D00B5F654 /* WBMessageViewController.swift in Sources */,
@@ -443,9 +489,12 @@
 				6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */,
 				6412E2C020D8AE84001DDBE4 /* WBNetworkManager+Extension.swift in Sources */,
 				640E1A0C20E4C4B500A2140F /* UIImage+Extension.swift in Sources */,
+				8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */,
 				64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */,
 				64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */,
+				8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */,
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
+				8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */,
 				640E1A1020E4D93E00A2140F /* WBStatusPictureView.swift in Sources */,
 				64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */,
 			);
@@ -594,6 +643,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = WB.Weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weibo/Weibo-Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -614,6 +664,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = WB.Weibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Weibo/Weibo-Bridge.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

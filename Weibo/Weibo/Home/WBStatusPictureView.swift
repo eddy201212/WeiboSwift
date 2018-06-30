@@ -84,9 +84,35 @@ extension WBStatusPictureView {
     
     @objc func tapAction(tapGesture: UITapGestureRecognizer) {
         
-        //let iv = tapGesture.view
+        guard let iv = tapGesture.view,
+        let picURLs = viewModel?.picURLs else {
+            return
+        }
         
-        //print(iv)
+        var selectedIndex = iv.tag
+        
+        //针对4张图的处理
+        if picURLs.count == 4 && selectedIndex > 1 {
+            selectedIndex -= 1
+        }
+        
+        let urls = (picURLs as NSArray).value(forKey: "largePic") as! [String]
+        
+        // 处理可见的图像视图数组
+        var imageViewList = [UIImageView]()
+        for iv in subviews as! [UIImageView] {
+            
+            if !iv.isHidden {
+                imageViewList.append(iv)
+            }
+        }
+        
+        //发送通知
+        NotificationCenter.default.post(name: NSNotification.Name(WBStatusCellBrowserPhotoNotificaiton), object: self, userInfo: [WBStatusCellBrowserPhotoURLsKey: urls,
+                       WBStatusCellBrowserPhotoImageViewKey: imageViewList,
+                       WBStatusCellBrowserPhotoSelectedIndexKey: selectedIndex]
+        )
+        
     }
 }
 

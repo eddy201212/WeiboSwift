@@ -19,6 +19,11 @@ let WBUserShouldLoginNotification = "WBUserShouldLoginNotification"
 
 let WBUserLoginSuccessedNotification = "WBUserLoginSuccessedNotification"
 
+let WBStatusCellBrowserPhotoNotificaiton = "WBStatusCellBrowserPhotoNotificaiton"
+
+let WBStatusCellBrowserPhotoURLsKey = "WBStatusCellBrowserPhotoURLsKey"
+let WBStatusCellBrowserPhotoImageViewKey = "WBStatusCellBrowserPhotoImageViewKey"
+let WBStatusCellBrowserPhotoSelectedIndexKey = "WBStatusCellBrowserPhotoSelectedIndexKey"
 
 let WBStatusPictureViewOutterMargin = CGFloat(12)
 let WBStatusPictureViewInnerMargin = CGFloat(3)
