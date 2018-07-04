@@ -41,8 +41,10 @@ class WBTabarViewController: UITabBarController {
         present(nav, animated: true, completion: nil)
     }
     
+    //发布微博
     @objc fileprivate func composeStatus() {
         
+        WBComposeTypeView.composeTypeView().show()
     }
 }
 

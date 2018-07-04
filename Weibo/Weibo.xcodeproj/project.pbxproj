@@ -35,6 +35,10 @@
 		64ADAF7820E20F6C00146A40 /* WBUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7720E20F6C00146A40 /* WBUser.swift */; };
 		64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7920E235C600146A40 /* WBTitleButton.swift */; };
 		64B6AB9620EC6BB3006E6126 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6AB9520EC6BB3006E6126 /* String+Extension.swift */; };
+		64B6AB9D20ECAA84006E6126 /* WBComposeTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6AB9C20ECAA84006E6126 /* WBComposeTypeView.swift */; };
+		64B6AB9F20ECAA9B006E6126 /* WBComposeTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B6AB9E20ECAA9B006E6126 /* WBComposeTypeView.xib */; };
+		64B6ABA120ECC56D006E6126 /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */; };
+		64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B6ABA220ECC580006E6126 /* WBComposeTypeButton.xib */; };
 		64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C299D720D3B7A5008E2327 /* WBVisitorView.swift */; };
 		64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58020D218920017E236 /* UIColor+Extension.swift */; };
 		64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */; };
@@ -86,6 +90,10 @@
 		64ADAF7720E20F6C00146A40 /* WBUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBUser.swift; sourceTree = "<group>"; };
 		64ADAF7920E235C600146A40 /* WBTitleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBTitleButton.swift; sourceTree = "<group>"; };
 		64B6AB9520EC6BB3006E6126 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		64B6AB9C20ECAA84006E6126 /* WBComposeTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeTypeView.swift; sourceTree = "<group>"; };
+		64B6AB9E20ECAA9B006E6126 /* WBComposeTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeTypeView.xib; sourceTree = "<group>"; };
+		64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
+		64B6ABA220ECC580006E6126 /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		64C299D720D3B7A5008E2327 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		64D7A58020D218920017E236 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
@@ -245,6 +253,10 @@
 			isa = PBXGroup;
 			children = (
 				64DA1A6520D0B87F00B5F654 /* WBComposeViewController.swift */,
+				64B6AB9C20ECAA84006E6126 /* WBComposeTypeView.swift */,
+				64B6AB9E20ECAA9B006E6126 /* WBComposeTypeView.xib */,
+				64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */,
+				64B6ABA220ECC580006E6126 /* WBComposeTypeButton.xib */,
 			);
 			path = Compose;
 			sourceTree = "<group>";
@@ -393,10 +405,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */,
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
 				640E1A0820E47FEC00A2140F /* WBStatusRetweetedCell.xib in Resources */,
 				64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */,
 				64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */,
+				64B6AB9F20ECAA9B006E6126 /* WBComposeTypeView.xib in Resources */,
 				64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -468,11 +482,13 @@
 				6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */,
 				641A6C2F20E33AFC00BB07DF /* WBStatusListViewModel.swift in Sources */,
 				64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */,
+				64B6AB9D20ECAA84006E6126 /* WBComposeTypeView.swift in Sources */,
 				640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */,
 				64B6AB9620EC6BB3006E6126 /* String+Extension.swift in Sources */,
 				6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */,
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
+				64B6ABA120ECC56D006E6126 /* WBComposeTypeButton.swift in Sources */,
 				8D5FBE8520E72E4000B5966D /* HMPhotoProgressView.m in Sources */,
 				644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */,
 				8D5FBE8620E72E4000B5966D /* HMPhotoBrowserAnimator.m in Sources */,
