@@ -40,6 +40,7 @@ class WBStatusCell: UITableViewCell {
             pictureView.viewModel = viewModel
             
             timeLabel.text = viewModel?.status.createdDate?.wb_dateDescription
+            sourceLabel.text = viewModel?.status.source
         }
     }
     
