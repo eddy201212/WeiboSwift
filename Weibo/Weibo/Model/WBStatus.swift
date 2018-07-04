@@ -16,19 +16,19 @@ class WBStatus: NSObject {
     
     @objc var user: WBUser?
     
-    @objc var create_at: String? {
+    @objc var created_at: String? {
         didSet {
-            //FIXME:
+            createdDate = Date.wb_sinaDate(string: created_at ?? "")
         }
     }
 
-    var createDate: Date?
+    var createdDate: Date?
     
-    @objc var source: String? {
-        didSet {
-            //FIXME:
-        }
-    }
+    @objc var source: String?// {
+//        didSet {
+//            //FIXME:
+//        }
+//    }
     
     //被转发的原创微博
     @objc var retweeted_status: WBStatus?

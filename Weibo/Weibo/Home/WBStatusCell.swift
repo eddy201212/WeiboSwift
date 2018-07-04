@@ -39,6 +39,7 @@ class WBStatusCell: UITableViewCell {
             toolbar.viewModel = viewModel
             pictureView.viewModel = viewModel
             
+            timeLabel.text = viewModel?.status.createdDate?.wb_dateDescription
         }
     }
     
