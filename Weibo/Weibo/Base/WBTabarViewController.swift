@@ -44,7 +44,23 @@ class WBTabarViewController: UITabBarController {
     //发布微博
     @objc fileprivate func composeStatus() {
         
-        WBComposeTypeView.composeTypeView().show()
+        let v = WBComposeTypeView.composeTypeView()
+        
+        v.show { [weak v] (clsName) in
+            
+            guard let clsName = clsName, let cls = NSClassFromString(Bundle.main.namespace + "." + clsName) as? UIViewController.Type else {
+                return;
+            }
+            
+            let vc = cls.init()
+            let nav = WBNavigationViewController(rootViewController: vc)
+            
+            self.present(nav, animated: true, completion: {
+                v?.removeFromSuperview()
+            })
+        }
+        
+        
     }
 }
 

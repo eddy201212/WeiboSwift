@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import pop
 
-fileprivate let buttonsInfo = [["imageName": "tabbar_compose_idea", "title": "文字", "clsName": "WBCompViewController"],
+fileprivate let buttonsInfo = [["imageName": "tabbar_compose_idea", "title": "文字", "clsName": "WBComposeViewController"],
                            ["imageName": "tabbar_compose_photo", "title": "照片／视频"],
                            ["imageName": "tabbar_compose_weibo", "title": "长微博"],
                            ["imageName": "tabbar_compose_lbs", "title": "签到"],
@@ -23,6 +24,15 @@ fileprivate let buttonsInfo = [["imageName": "tabbar_compose_idea", "title": "�
 class WBComposeTypeView: UIView {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var closeButton: UIButton!
+    
+    @IBOutlet weak var returnButtonCenterXCons: NSLayoutConstraint!
+    @IBOutlet weak var closeButtonCenterXCons: NSLayoutConstraint!
+    
+    fileprivate var completionBlock: ((_ clsName: String?) -> ())?
+    
     
     class func composeTypeView() -> WBComposeTypeView {
         
@@ -39,12 +49,15 @@ class WBComposeTypeView: UIView {
         
     }
     
-    func show() {
+    func show(completion: @escaping (_ clsName: String?)->()) {
+        
+        completionBlock =  completion
         
         guard let vc = UIApplication.shared.keyWindow?.rootViewController else {
             return
         }
         
+        alpha = 0
         vc.view.addSubview(self)
         
         showCurrentView()
@@ -53,7 +66,23 @@ class WBComposeTypeView: UIView {
     
     @IBAction func close(_ sender: UIButton) {
         
-        self.removeFromSuperview()
+        hideButtons()
+    }
+    
+    @IBAction func clickReturnButton(_ sender: UIButton) {
+        
+        scrollView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+        
+        returnButtonCenterXCons.constant = 0
+        closeButtonCenterXCons.constant = 0
+        
+        UIView.animate(withDuration: 0.25, animations: {
+            self.layoutIfNeeded()
+            self.returnButton.alpha = 0
+        }) { (_) in
+            self.returnButton.alpha = 1
+            self.returnButton.isHidden = true
+        }
     }
     
     override func awakeFromNib() {
@@ -67,13 +96,121 @@ extension WBComposeTypeView {
     
     fileprivate func showCurrentView() {
         
+        let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+
+        anim.fromValue = 0
+        anim.toValue = 1
+        anim.duration = 0.5
+
+        pop_add(anim, forKey: nil)
+
+        showButtons()
+    }
+    
+    fileprivate func showButtons() {
+        
+        let v = scrollView.subviews[0]
+        
+        for (i, btn) in v.subviews.enumerated() {
+            
+            let anim: POPSpringAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
+            
+            anim.fromValue = btn.center.y + 300
+            anim.toValue = btn.center.y
+            anim.springBounciness = 8
+            anim.springSpeed = 8
+            anim.beginTime = CACurrentMediaTime() + CFTimeInterval(i) * 0.025
+            
+            btn.layer.pop_add(anim, forKey: nil)
+        }
+    }
+    
+    fileprivate func hideButtons() {
+        
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        let v = scrollView.subviews[page]
+        
+        for (i, btn) in v.subviews.enumerated().reversed() {
+            
+            let anim: POPSpringAnimation = POPSpringAnimation(propertyNamed: kPOPLayerPositionY)
+            
+            anim.fromValue = btn.center.y
+            anim.toValue = btn.center.y + 380
+            anim.springBounciness = 8
+            anim.springSpeed = 8
+            anim.beginTime = CACurrentMediaTime() + CFTimeInterval(v.subviews.count - i) * 0.025
+            
+            btn.layer.pop_add(anim, forKey: nil)
+            
+            if i == 0 {
+                anim.completionBlock = { (_, _) in
+                    
+                    self.hideCurrentView()
+                }
+            }
+        }
+    }
+    
+    fileprivate func hideCurrentView() {
+        
+        let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+        anim.fromValue = 1
+        anim.toValue = 0
+        anim.duration = 0.25
+        pop_add(anim, forKey: nil)
+        anim.completionBlock = { (_, _) in
+            
+            self.removeFromSuperview()
+        }
     }
 }
 
 extension WBComposeTypeView {
     
-    @objc fileprivate func selectedButton(btn: WBComposeTypeButton) {
-        print("点击图标")
+    @objc fileprivate func selectedButton(currentBtn: WBComposeTypeButton) {
+        
+        let page = Int(scrollView.contentOffset.x / scrollView.bounds.width)
+        let v = scrollView.subviews[page]
+        
+        for (i, btn) in v.subviews.enumerated() {
+            
+            let anim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewScaleXY)
+            
+            let scale = (btn == currentBtn) ? 2: 0.2
+            anim.toValue = NSValue(cgPoint: CGPoint(x: scale, y: scale))
+            anim.duration = 0.5
+            btn.pop_add(anim, forKey: nil)
+            
+            let alphaAnim: POPBasicAnimation = POPBasicAnimation(propertyNamed: kPOPViewAlpha)
+            
+            alphaAnim.toValue = 0.2
+            alphaAnim.duration = 0.5
+            btn.pop_add(alphaAnim, forKey: nil)
+            
+            if i == 0 {
+                anim.completionBlock = { (_, _) in
+                    
+                    self.completionBlock?(currentBtn.clsName)
+                }
+            }
+        }
+    }
+    
+    @objc fileprivate func clickMore() {
+        
+        let offset = CGPoint(x: scrollView.bounds.width, y: 0)
+        scrollView.setContentOffset(offset, animated: true)
+        
+        returnButton.isHidden = false
+        
+        let margin = scrollView.bounds.width / 6
+        
+        closeButtonCenterXCons.constant += margin
+        returnButtonCenterXCons.constant -= margin
+        
+        UIView.animate(withDuration: 0.25) {
+            self.layoutIfNeeded()
+        }
     }
 }
 
@@ -99,6 +236,7 @@ extension WBComposeTypeView {
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.isScrollEnabled = false
+        scrollView.clipsToBounds = false
     }
     
     func addButton(v: UIView, idx: Int) {
@@ -121,7 +259,12 @@ extension WBComposeTypeView {
             let btn = WBComposeTypeButton.composeTypeButton(imageName: imageName, title: title)
             v.addSubview(btn)
             
-            btn.addTarget(self, action: #selector(selectedButton(btn:)), for: .touchUpInside)
+            if let actionName = dict["actionName"] {
+                btn.addTarget(self, action: Selector(actionName), for: .touchUpInside)
+            } else {
+                btn.addTarget(self, action: #selector(selectedButton(currentBtn:)), for: .touchUpInside)
+            }
+            
             
             btn.clsName = dict["clsName"]
         }

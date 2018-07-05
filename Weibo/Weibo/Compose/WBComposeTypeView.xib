@@ -34,10 +34,19 @@
                                             <action selector="close:" destination="uVs-9h-cQN" eventType="touchUpInside" id="Xm8-mL-WgF"/>
                                         </connections>
                                     </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeT-2U-LpZ">
+                                        <rect key="frame" x="175" y="9.5" width="25" height="25"/>
+                                        <state key="normal" backgroundImage="tabbar_compose_background_icon_return"/>
+                                        <connections>
+                                            <action selector="clickReturnButton:" destination="uVs-9h-cQN" eventType="touchUpInside" id="QDV-a7-x1x"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="KeT-2U-LpZ" firstAttribute="centerX" secondItem="O4s-RP-hxd" secondAttribute="centerX" id="4zf-55-DY0"/>
                                     <constraint firstItem="2Ec-DK-CQM" firstAttribute="centerY" secondItem="O4s-RP-hxd" secondAttribute="centerY" id="Kxb-aa-cr2"/>
+                                    <constraint firstItem="KeT-2U-LpZ" firstAttribute="centerY" secondItem="O4s-RP-hxd" secondAttribute="centerY" id="MBH-9l-grk"/>
                                     <constraint firstAttribute="height" constant="44" id="Phi-Da-qVV"/>
                                     <constraint firstItem="2Ec-DK-CQM" firstAttribute="centerX" secondItem="O4s-RP-hxd" secondAttribute="centerX" id="l6y-hb-P1Q"/>
                                 </constraints>
@@ -71,6 +80,10 @@
                 <constraint firstAttribute="trailing" secondItem="YHv-3L-auT" secondAttribute="trailing" id="hNo-dV-tKR"/>
             </constraints>
             <connections>
+                <outlet property="closeButton" destination="2Ec-DK-CQM" id="BXE-pH-cTl"/>
+                <outlet property="closeButtonCenterXCons" destination="l6y-hb-P1Q" id="73n-u2-ru8"/>
+                <outlet property="returnButton" destination="KeT-2U-LpZ" id="y7c-iK-38d"/>
+                <outlet property="returnButtonCenterXCons" destination="4zf-55-DY0" id="eOa-yq-iDb"/>
                 <outlet property="scrollView" destination="j3Y-sY-Yvw" id="lbe-7J-eRe"/>
             </connections>
             <point key="canvasLocation" x="7" y="41"/>
@@ -79,5 +92,6 @@
     <resources>
         <image name="compose_slogan" width="154" height="48"/>
         <image name="tabbar_compose_background_icon_close" width="25" height="25"/>
+        <image name="tabbar_compose_background_icon_return" width="25" height="25"/>
     </resources>
 </document>
