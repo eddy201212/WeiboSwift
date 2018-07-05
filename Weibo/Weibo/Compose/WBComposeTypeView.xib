@@ -30,6 +30,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ec-DK-CQM">
                                         <rect key="frame" x="175.5" y="9.5" width="25" height="25"/>
                                         <state key="normal" backgroundImage="tabbar_compose_background_icon_close"/>
+                                        <connections>
+                                            <action selector="close:" destination="uVs-9h-cQN" eventType="touchUpInside" id="Xm8-mL-WgF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

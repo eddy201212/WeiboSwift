@@ -33,6 +33,8 @@ class WBComposeTypeView: UIView {
         //xib视图默认 600 * 600, 所以需要进行修改
         view.frame = UIScreen.main.bounds
         
+        view.setupUI()
+        
         return view
         
     }
@@ -44,19 +46,34 @@ class WBComposeTypeView: UIView {
         }
         
         vc.view.addSubview(self)
+        
+        showCurrentView()
+    }
+    
+    
+    @IBAction func close(_ sender: UIButton) {
+        
+        self.removeFromSuperview()
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        setupUI()
+        //setupUI()
+    }
+}
+
+extension WBComposeTypeView {
+    
+    fileprivate func showCurrentView() {
+        
     }
 }
 
 extension WBComposeTypeView {
     
     @objc fileprivate func selectedButton(btn: WBComposeTypeButton) {
-        
+        print("点击图标")
     }
 }
 
@@ -104,7 +121,7 @@ extension WBComposeTypeView {
             let btn = WBComposeTypeButton.composeTypeButton(imageName: imageName, title: title)
             v.addSubview(btn)
             
-            btn.addTarget(self, action: #selector(selectedButton(btn:)), for: .touchDragInside)
+            btn.addTarget(self, action: #selector(selectedButton(btn:)), for: .touchUpInside)
             
             btn.clsName = dict["clsName"]
         }
@@ -126,8 +143,6 @@ extension WBComposeTypeView {
             let col = i % 3
             
             let x = margin * CGFloat(col + 1) + CGFloat(col) * btnSize.width
-            print("---\(i)---")
-            
             btn.frame = CGRect(x: x, y: y, width: btnSize.width, height: btnSize.width)
         }
     }
