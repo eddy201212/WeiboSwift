@@ -43,10 +43,7 @@ extension WBComposeViewController {
         view.backgroundColor = UIColor.white
         
         textView.contentInset = UIEdgeInsets(top: navigationBarHeight, left: 0, bottom: 0, right: 0)
-        
-        if isIphoneX {
-            toolbarBottomCons.constant = bottomSafeMargin
-        }
+        toolbarBottomCons.constant = bottomSafeMargin
         
         setupNavigationBar()
         setupToolbar()
