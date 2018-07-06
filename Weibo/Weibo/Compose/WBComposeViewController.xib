@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WBComposeViewController" customModule="Weibo" customModuleProvider="target">
+            <connections>
+                <outlet property="sendButton" destination="iTl-pF-ntt" id="tfq-Fh-p9r"/>
+                <outlet property="textView" destination="OdI-76-4cS" id="Wca-Uq-lYv"/>
+                <outlet property="titleLabel" destination="66b-AW-Gyn" id="Ggl-lf-3jM"/>
+                <outlet property="toolbar" destination="0oI-BU-Nti" id="0Ur-fo-ucO"/>
+                <outlet property="toolbarBottomCons" destination="CTy-zC-3qm" id="efb-HZ-MvI"/>
+                <outlet property="view" destination="lWc-yi-6sd" id="Bhv-q8-EVx"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="lWc-yi-6sd">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0oI-BU-Nti">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Nlu-b9-QxX"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem title="Item" id="5yR-7Q-4PX"/>
+                    </items>
+                </toolbar>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-76-4cS">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="OdI-76-4cS" secondAttribute="trailing" id="0ne-pB-hdG"/>
+                <constraint firstAttribute="bottom" secondItem="0oI-BU-Nti" secondAttribute="bottom" id="CTy-zC-3qm"/>
+                <constraint firstAttribute="trailing" secondItem="0oI-BU-Nti" secondAttribute="trailing" id="CUz-KW-xy6"/>
+                <constraint firstItem="OdI-76-4cS" firstAttribute="top" secondItem="lWc-yi-6sd" secondAttribute="top" id="CWB-KY-WLR"/>
+                <constraint firstItem="OdI-76-4cS" firstAttribute="leading" secondItem="lWc-yi-6sd" secondAttribute="leading" id="UyC-gK-ads"/>
+                <constraint firstItem="0oI-BU-Nti" firstAttribute="top" secondItem="OdI-76-4cS" secondAttribute="bottom" id="ftY-X5-zlU"/>
+                <constraint firstItem="0oI-BU-Nti" firstAttribute="leading" secondItem="lWc-yi-6sd" secondAttribute="leading" id="kxw-zk-EQo"/>
+            </constraints>
+            <point key="canvasLocation" x="-80" y="36"/>
+        </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iTl-pF-ntt">
+            <rect key="frame" x="0.0" y="0.0" width="45" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+            <state key="normal" title="发布" backgroundImage="common_button_big_orange">
+                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            </state>
+            <point key="canvasLocation" x="-519.5" y="91"/>
+        </button>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="66b-AW-Gyn">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="35"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <attributedString key="attributedText">
+                <fragment>
+                    <string key="content">发布微博
+</string>
+                    <attributes>
+                        <font key="NSFont" size="11" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment>
+                    <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                    <attributes>
+                        <font key="NSFont" size="5" name=".AppleSystemUIFont"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+                <fragment content="重名重名重名">
+                    <attributes>
+                        <color key="NSColor" red="0.46815891806386628" green="0.47279415487637977" blue="0.47279415487637977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
+                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                    </attributes>
+                </fragment>
+            </attributedString>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-512" y="265.5"/>
+        </label>
+    </objects>
+    <resources>
+        <image name="common_button_big_orange" width="11" height="9"/>
+    </resources>
+</document>

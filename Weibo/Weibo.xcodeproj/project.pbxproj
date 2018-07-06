@@ -40,6 +40,8 @@
 		64B6ABA120ECC56D006E6126 /* WBComposeTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */; };
 		64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64B6ABA220ECC580006E6126 /* WBComposeTypeButton.xib */; };
 		64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C299D720D3B7A5008E2327 /* WBVisitorView.swift */; };
+		64C88CD220EE0AD2005274BD /* WBComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */; };
+		64C88CD420EE1964005274BD /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C88CD320EE1964005274BD /* UIDevice+Extension.swift */; };
 		64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58020D218920017E236 /* UIColor+Extension.swift */; };
 		64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */; };
 		64DA1A6020D0B84800B5F654 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */; };
@@ -95,6 +97,8 @@
 		64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBComposeTypeButton.swift; sourceTree = "<group>"; };
 		64B6ABA220ECC580006E6126 /* WBComposeTypeButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeTypeButton.xib; sourceTree = "<group>"; };
 		64C299D720D3B7A5008E2327 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
+		64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeViewController.xib; sourceTree = "<group>"; };
+		64C88CD320EE1964005274BD /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		64D7A58020D218920017E236 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				64DA1A6520D0B87F00B5F654 /* WBComposeViewController.swift */,
+				64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */,
 				64B6AB9C20ECAA84006E6126 /* WBComposeTypeView.swift */,
 				64B6AB9E20ECAA9B006E6126 /* WBComposeTypeView.xib */,
 				64B6ABA020ECC56D006E6126 /* WBComposeTypeButton.swift */,
@@ -298,6 +303,7 @@
 				640E1A0920E4C2AD00A2140F /* UIImageView+SDWebImage.swift */,
 				640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */,
 				64B6AB9520EC6BB3006E6126 /* String+Extension.swift */,
+				64C88CD320EE1964005274BD /* UIDevice+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -407,6 +413,7 @@
 			files = (
 				64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */,
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
+				64C88CD220EE0AD2005274BD /* WBComposeViewController.xib in Resources */,
 				640E1A0820E47FEC00A2140F /* WBStatusRetweetedCell.xib in Resources */,
 				64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */,
 				64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */,
@@ -500,6 +507,7 @@
 				64A1119B20CFD58E002B7E12 /* WBBaseViewController.swift in Sources */,
 				64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */,
 				64DA1A6020D0B84800B5F654 /* WBHomeViewController.swift in Sources */,
+				64C88CD420EE1964005274BD /* UIDevice+Extension.swift in Sources */,
 				64DA1A6620D0B87F00B5F654 /* WBComposeViewController.swift in Sources */,
 				641A6C3120E3619900BB07DF /* WBStatusListDAL.swift in Sources */,
 				64A1119F20CFD686002B7E12 /* WBNavigationViewController.swift in Sources */,

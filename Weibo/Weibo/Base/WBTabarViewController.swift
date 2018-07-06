@@ -52,8 +52,12 @@ class WBTabarViewController: UITabBarController {
                 return;
             }
             
-            let vc = cls.init()
-            let nav = WBNavigationViewController(rootViewController: vc)
+            let nibvc = cls.init(nibName: clsName, bundle: nil)
+            let nav = UINavigationController(rootViewController: nibvc)
+            
+            // 让导航控制器强行更新约束 - 会直接更新所有子势图的约束
+            // 提示：开发中如果发现不希望的布局约束和动画在一起，应该向前寻找，强行更新约束！
+            nav.view.layoutIfNeeded()
             
             self.present(nav, animated: true, completion: {
                 v?.removeFromSuperview()
