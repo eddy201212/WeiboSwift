@@ -22,6 +22,15 @@
 		641A6C2F20E33AFC00BB07DF /* WBStatusListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641A6C2E20E33AFC00BB07DF /* WBStatusListViewModel.swift */; };
 		641A6C3120E3619900BB07DF /* WBStatusListDAL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641A6C3020E3619900BB07DF /* WBStatusListDAL.swift */; };
 		644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */; };
+		6452796D20EF633000E461F1 /* CZEmoticonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796320EF633000E461F1 /* CZEmoticonManager.swift */; };
+		6452796E20EF633000E461F1 /* HMEmoticon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6452796420EF633000E461F1 /* HMEmoticon.bundle */; };
+		6452796F20EF633000E461F1 /* CZEmoticon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796620EF633000E461F1 /* CZEmoticon.swift */; };
+		6452797020EF633000E461F1 /* CZEmoticonAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796720EF633000E461F1 /* CZEmoticonAttachment.swift */; };
+		6452797120EF633000E461F1 /* CZEmoticonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796920EF633000E461F1 /* CZEmoticonCell.swift */; };
+		6452797220EF633000E461F1 /* CZEmoticonInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796A20EF633000E461F1 /* CZEmoticonInputView.swift */; };
+		6452797320EF633000E461F1 /* CZEmoticonInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6452796B20EF633000E461F1 /* CZEmoticonInputView.xib */; };
+		6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796C20EF633000E461F1 /* CZEmoticonLayout.swift */; };
+		6452797620EF643000E461F1 /* CZEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452797520EF643000E461F1 /* CZEmoticonPackage.swift */; };
 		64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118820CFCB46002B7E12 /* AppDelegate.swift */; };
 		64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118A20CFCB46002B7E12 /* ViewController.swift */; };
 		64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A1118F20CFCB5F002B7E12 /* Assets.xcassets */; };
@@ -77,6 +86,15 @@
 		641A6C2E20E33AFC00BB07DF /* WBStatusListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusListViewModel.swift; sourceTree = "<group>"; };
 		641A6C3020E3619900BB07DF /* WBStatusListDAL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusListDAL.swift; sourceTree = "<group>"; };
 		644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBOAuthViewController.swift; sourceTree = "<group>"; };
+		6452796320EF633000E461F1 /* CZEmoticonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticonManager.swift; sourceTree = "<group>"; };
+		6452796420EF633000E461F1 /* HMEmoticon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HMEmoticon.bundle; sourceTree = "<group>"; };
+		6452796620EF633000E461F1 /* CZEmoticon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticon.swift; sourceTree = "<group>"; };
+		6452796720EF633000E461F1 /* CZEmoticonAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticonAttachment.swift; sourceTree = "<group>"; };
+		6452796920EF633000E461F1 /* CZEmoticonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticonCell.swift; sourceTree = "<group>"; };
+		6452796A20EF633000E461F1 /* CZEmoticonInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticonInputView.swift; sourceTree = "<group>"; };
+		6452796B20EF633000E461F1 /* CZEmoticonInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CZEmoticonInputView.xib; sourceTree = "<group>"; };
+		6452796C20EF633000E461F1 /* CZEmoticonLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZEmoticonLayout.swift; sourceTree = "<group>"; };
+		6452797520EF643000E461F1 /* CZEmoticonPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZEmoticonPackage.swift; sourceTree = "<group>"; };
 		64A1118520CFCB46002B7E12 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A1118820CFCB46002B7E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64A1118A20CFCB46002B7E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +175,46 @@
 				641A6C3020E3619900BB07DF /* WBStatusListDAL.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6452796120EF633000E461F1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				6452796220EF633000E461F1 /* Emoticon */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		6452796220EF633000E461F1 /* Emoticon */ = {
+			isa = PBXGroup;
+			children = (
+				6452796320EF633000E461F1 /* CZEmoticonManager.swift */,
+				6452796420EF633000E461F1 /* HMEmoticon.bundle */,
+				6452796520EF633000E461F1 /* Model */,
+				6452796820EF633000E461F1 /* View */,
+			);
+			path = Emoticon;
+			sourceTree = "<group>";
+		};
+		6452796520EF633000E461F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6452796620EF633000E461F1 /* CZEmoticon.swift */,
+				6452796720EF633000E461F1 /* CZEmoticonAttachment.swift */,
+				6452797520EF643000E461F1 /* CZEmoticonPackage.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6452796820EF633000E461F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6452796920EF633000E461F1 /* CZEmoticonCell.swift */,
+				6452796A20EF633000E461F1 /* CZEmoticonInputView.swift */,
+				6452796B20EF633000E461F1 /* CZEmoticonInputView.xib */,
+				6452796C20EF633000E461F1 /* CZEmoticonLayout.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		64A1117C20CFCB45002B7E12 = {
@@ -277,6 +335,7 @@
 		64DA1A6A20D0C87A00B5F654 /* Toos */ = {
 			isa = PBXGroup;
 			children = (
+				6452796120EF633000E461F1 /* UI */,
 				64DA1A6D20D0F25900B5F654 /* Network */,
 				6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */,
 			);
@@ -411,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6452797320EF633000E461F1 /* CZEmoticonInputView.xib in Resources */,
 				64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */,
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
 				64C88CD220EE0AD2005274BD /* WBComposeViewController.xib in Resources */,
@@ -418,6 +478,7 @@
 				64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */,
 				64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */,
 				64B6AB9F20ECAA9B006E6126 /* WBComposeTypeView.xib in Resources */,
+				6452796E20EF633000E461F1 /* HMEmoticon.bundle in Resources */,
 				64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +544,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64DA1A6420D0B86D00B5F654 /* WBDiscoverViewController.swift in Sources */,
+				6452797020EF633000E461F1 /* CZEmoticonAttachment.swift in Sources */,
 				64ADAF7820E20F6C00146A40 /* WBUser.swift in Sources */,
 				6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */,
 				64DA1A6C20D0C89B00B5F654 /* WBNetworkManager.swift in Sources */,
@@ -490,10 +552,12 @@
 				641A6C2F20E33AFC00BB07DF /* WBStatusListViewModel.swift in Sources */,
 				64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */,
 				64B6AB9D20ECAA84006E6126 /* WBComposeTypeView.swift in Sources */,
+				6452797620EF643000E461F1 /* CZEmoticonPackage.swift in Sources */,
 				640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */,
 				64B6AB9620EC6BB3006E6126 /* String+Extension.swift in Sources */,
 				6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */,
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
+				6452796D20EF633000E461F1 /* CZEmoticonManager.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
 				64B6ABA120ECC56D006E6126 /* WBComposeTypeButton.swift in Sources */,
 				8D5FBE8520E72E4000B5966D /* HMPhotoProgressView.m in Sources */,
@@ -502,14 +566,17 @@
 				64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */,
 				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
 				64DA1A6220D0B85D00B5F654 /* WBMessageViewController.swift in Sources */,
+				6452796F20EF633000E461F1 /* CZEmoticon.swift in Sources */,
 				64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */,
 				641A6C2D20E3367B00BB07DF /* WBWebViewController.swift in Sources */,
 				64A1119B20CFD58E002B7E12 /* WBBaseViewController.swift in Sources */,
 				64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */,
+				6452797120EF633000E461F1 /* CZEmoticonCell.swift in Sources */,
 				64DA1A6020D0B84800B5F654 /* WBHomeViewController.swift in Sources */,
 				64C88CD420EE1964005274BD /* UIDevice+Extension.swift in Sources */,
 				64DA1A6620D0B87F00B5F654 /* WBComposeViewController.swift in Sources */,
 				641A6C3120E3619900BB07DF /* WBStatusListDAL.swift in Sources */,
+				6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */,
 				64A1119F20CFD686002B7E12 /* WBNavigationViewController.swift in Sources */,
 				64A1119D20CFD655002B7E12 /* WBTabarViewController.swift in Sources */,
 				640E1A0E20E4CC6400A2140F /* WBStatusToolBar.swift in Sources */,
@@ -520,6 +587,7 @@
 				8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */,
 				64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */,
 				64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */,
+				6452797220EF633000E461F1 /* CZEmoticonInputView.swift in Sources */,
 				8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */,
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
 				8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */,
