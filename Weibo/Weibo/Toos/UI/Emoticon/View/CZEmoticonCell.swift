@@ -8,6 +8,19 @@
 
 import UIKit
 
+/// 表情 Cell 的协议
+@objc protocol CZEmoticonCellDelegate: NSObjectProtocol {
+    
+    /// 表情 cell 选中表情模型
+    ///
+    /// - parameter em: 表情模型／nil 表示删除
+    func emoticonCellDidSelectedEmoticon(cell: CZEmoticonCell, em: CZEmoticon?)
+}
+
+/// 表情的页面 Cell
+/// - 每一个 cell 就是和 collectionView 一样大小
+/// - 每一个 cell 中用九宫格的算法，自行添加 20 个表情
+/// - 最后一个位置放置删除按钮
 class CZEmoticonCell: UICollectionViewCell {
     
     /// 当前页面的表情模型数组，`最多` 20 个
@@ -17,7 +30,30 @@ class CZEmoticonCell: UICollectionViewCell {
             
             print("表情包的数量\(emoticons?.count ?? 0)")
             
+            // 1. 隐藏所有的按钮
+            for v in contentView.subviews {
+                
+                v.isHidden = true
+            }
             
+            // 显示删除按钮
+            contentView.subviews.last?.isHidden = false
+            
+             // 2. 遍历表情模型数组，设置按钮图像
+            for (i, em) in (emoticons ?? []).enumerated() {
+                
+                // 1> 取出按钮
+                if let btn =  contentView.subviews[i] as? UIButton {
+                    
+                    // 设置图像 - 如果图像为 nil 会清空图像，避免复用
+                    btn.setImage(em.image, for: .normal)
+                    
+                    // 设置 emoji 的字符串 - 如果 emoji 为 nil 会清空 title，避免复用
+                    btn.setTitle(em.emoji, for: .normal)
+                    
+                    btn.isHidden = false
+                }
+            }
         }
     }
     

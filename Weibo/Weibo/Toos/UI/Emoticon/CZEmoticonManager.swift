@@ -26,7 +26,7 @@ class CZEmoticonManager {
     /// 构造函数，如果在 init 之前增加 private 修饰符，可以要求调用者必须通过 shared 访问对象
     /// OC 要重写 allocWithZone 方法
     private init() {
-        //loadPackages()
+        loadPackages()
     }
 }
 

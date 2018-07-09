@@ -12,12 +12,12 @@ import UIKit
 class CZEmoticonPackage: NSObject {
 
     //表情包分组名
-    var groupName: String?
+    @objc var groupName: String?
     //背景图片名称
-    var bgImageName: String?
+    @objc var bgImageName: String?
     
     //表情包目录，从目录下加载 info.plist 可以创建表情模型数组
-    var directory: String? {
+    @objc var directory: String? {
         didSet {
             
             //当设置目录时，从目录下加载 info.plist
@@ -74,7 +74,7 @@ class CZEmoticonPackage: NSObject {
         return subArray as! [CZEmoticon]
     }
     
-    override var description: String {
+    @objc override var description: String {
         return yy_modelDescription()
     }
     

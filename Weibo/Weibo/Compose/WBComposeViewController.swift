@@ -16,12 +16,43 @@ class WBComposeViewController: UIViewController {
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var titleLabel: UILabel!
 
+    /// 工具栏底部约束
     @IBOutlet weak var toolbarBottomCons: NSLayoutConstraint!
+    
+    /// 表情输入视图
+    lazy var emoticonView = CZEmoticonInputView.inputView { (emoticon) in
+        
+        print(emoticon)
+        
+        // FIXME:插入表情
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupUI()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardChanged), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 激活键盘
+        textView.becomeFirstResponder()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        textView.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // 关闭键盘
+        textView.resignFirstResponder()
     }
 }
 
@@ -34,9 +65,35 @@ extension WBComposeViewController {
     
     @objc func emoticonKeyboard() {
         
+        // 2> 设置键盘视图
+        textView.inputView = (textView.inputView == nil) ? emoticonView : nil
+        
+        // 3> !!!刷新键盘视图
+        textView.reloadInputViews()
+    }
+    
+    @objc private func keyboardChanged(n: Notification) {
+        
+        // 1. 目标 rect
+        guard let rect = (n.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue,
+            let duration = (n.userInfo?[UIKeyboardAnimationDurationUserInfoKey] as? NSNumber)?.doubleValue else {
+                return
+        }
+        
+        // 2. 设置底部约束的高度
+        let offset = view.bounds.height - rect.origin.y
+        
+        // 3. 更新底部约束
+        toolbarBottomCons.constant = offset
+        
+        // 4. 动画更新约束
+        UIView.animate(withDuration: duration) {
+            self.view.layoutIfNeeded()
+        }
     }
 }
 
+// MARK: - 设置界面
 extension WBComposeViewController {
     
     fileprivate func setupUI() {
@@ -97,4 +154,9 @@ extension WBComposeViewController {
         
         toolbar.items = items;
     }
+}
+
+// MARK: - UITextViewDelegate
+extension WBComposeViewController: UITextViewDelegate {
+    
 }
