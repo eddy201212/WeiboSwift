@@ -23,6 +23,8 @@ import UIKit
 /// - 最后一个位置放置删除按钮
 class CZEmoticonCell: UICollectionViewCell {
     
+    weak var delegate: CZEmoticonCellDelegate?
+    
     /// 当前页面的表情模型数组，`最多` 20 个
     var emoticons: [CZEmoticon]? {
         
@@ -71,9 +73,23 @@ class CZEmoticonCell: UICollectionViewCell {
 
 extension CZEmoticonCell {
     
+    
+    /// 选中表情按钮
+    ///
+    /// - Parameter btn: 按钮
     @objc fileprivate func selectedEmoticonButton(btn: UIButton) {
         
+        // 1. 取 tag 0~20 20 对应的是删除按钮
+        let tag = btn.tag
         
+        // 2. 根据 tag 判断是否是删除按钮，如果不是删除按钮，取得表情
+        var em: CZEmoticon?
+        if tag < (emoticons?.count)! {
+            em = emoticons?[tag]
+        }
+        
+        // 3. em 要么是选中的模型，如果为 nil 对应的是删除按钮
+        delegate?.emoticonCellDidSelectedEmoticon(cell: self, em: em)
     }
     
     @objc fileprivate func longGesture(gesture: UILongPressGestureRecognizer) {

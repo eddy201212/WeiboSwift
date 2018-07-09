@@ -122,6 +122,8 @@ extension CZEmoticonInputView: UICollectionViewDataSource {
         
         cell.emoticons = emoticons
         
+        cell.delegate = self
+        
         // 3. 返回 cell
         return cell
     }
@@ -140,6 +142,17 @@ extension CZEmoticonInputView: CZEmoticonCellDelegate {
         
        // 执行闭包，回调选中的表情
         seletedEmoticonCallBack?(em)
+        
+        guard let em = em else {
+            return
+        }
+        
+        let indexPath = collectionView.indexPathsForVisibleItems[0]
+        if indexPath.section == 0 {
+            return
+        }
+        
+        
     }
 }
 

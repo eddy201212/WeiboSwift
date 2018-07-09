@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class WBComposeViewController: UIViewController {
 
     @IBOutlet weak var toolbar: UIToolbar!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView: WBComposeTextView!
     
     @IBOutlet var sendButton: UIButton!
     @IBOutlet var titleLabel: UILabel!
@@ -22,9 +23,8 @@ class WBComposeViewController: UIViewController {
     /// 表情输入视图
     lazy var emoticonView = CZEmoticonInputView.inputView { (emoticon) in
         
-        print(emoticon)
-        
-        // FIXME:插入表情
+        //print(emoticon)
+        self.textView.insertEmoticon(em: emoticon)
     }
     
     override func viewDidLoad() {
@@ -33,6 +33,11 @@ class WBComposeViewController: UIViewController {
         setupUI()
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardChanged), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+    }
+    
+    deinit {
+        
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +66,33 @@ extension WBComposeViewController {
     @objc func close() {
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    /// 发布微博
+    @IBAction func postStatus() {
+        
+        print("发送微博的内容\(textView.text)")
+        
+        WBNetworkManager.shared.postStatus(text: textView.text) { (result, isSuccess) in
+            
+            // 修改指示器样式
+            SVProgressHUD.setDefaultStyle(.dark)
+            
+            let message = isSuccess ? "发布成功" : "网络不给力"
+            
+            SVProgressHUD.showInfo(withStatus: message)
+            
+            // 如果成功，延迟一段时间关闭当前窗口
+            if isSuccess {
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+                    
+                    // 恢复样式
+                    SVProgressHUD.setDefaultStyle(.light)
+                    self.close()
+                })
+            }
+        }
     }
     
     @objc func emoticonKeyboard() {
@@ -113,6 +145,8 @@ extension WBComposeViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: sendButton)
         
         navigationItem.titleView = titleLabel
+        
+        sendButton.isEnabled = false
     }
     
     fileprivate func setupToolbar() {
@@ -157,6 +191,23 @@ extension WBComposeViewController {
 }
 
 // MARK: - UITextViewDelegate
+/**
+ 通知：一对多，只要有注册的监听者，在注销监听之前，都可以接收到通知！
+ 代理：一对一，最后设置的代理对象有效！
+ 
+ 苹果日常开发中，代理的监听方式是最多的！
+ 
+ - 代理是发生事件时，直接让代理执行协议方法！
+ 代理的效率更高
+ 直接的反向传值
+ - 通知是发生事件时，将通知发送给通知中心，通知中心再`广播`通知！
+ 通知想对要低一些
+ 如果层次嵌套的非常深，可以使用通知传值
+ */
 extension WBComposeViewController: UITextViewDelegate {
     
+    /// 文本视图文字变化
+    func textViewDidChange(_ textView: UITextView) {
+        sendButton.isEnabled = textView.hasText
+    }
 }

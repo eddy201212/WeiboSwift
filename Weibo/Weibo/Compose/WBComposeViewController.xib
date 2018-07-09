@@ -33,7 +33,7 @@
                         <barButtonItem title="Item" id="5yR-7Q-4PX"/>
                     </items>
                 </toolbar>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-76-4cS">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-76-4cS" customClass="WBComposeTextView" customModule="Weibo" customModuleProvider="target">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -59,6 +59,9 @@
             <state key="normal" title="发布" backgroundImage="common_button_big_orange">
                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             </state>
+            <connections>
+                <action selector="postStatus" destination="-1" eventType="touchUpInside" id="jnd-qi-8BH"/>
+            </connections>
             <point key="canvasLocation" x="-519.5" y="91"/>
         </button>
         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="66b-AW-Gyn">

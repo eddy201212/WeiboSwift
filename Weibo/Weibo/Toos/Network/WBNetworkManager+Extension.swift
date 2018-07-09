@@ -48,6 +48,31 @@ extension WBNetworkManager {
     }
 }
 
+
+// MARK: - 发布微博
+extension WBNetworkManager {
+    
+    
+    func postStatus(text: String, completion:@escaping(_ result: [String: AnyObject]?, _ isSuccess: Bool)->()) {
+        
+        // 1. url
+        let urlString: String
+        
+        // 根据是否有图像，选择不同的接口地址
+//        if image == nil {
+        urlString = "https://api.weibo.com/2/statuses/update.json"
+        
+        // 2.参数字典
+        let params = ["status": text]
+        
+        // 3.发起网络请求
+        request(url: urlString, method: .post, parameters: params) { (json, isSuccess) in
+            
+            completion(json as? [String: AnyObject], isSuccess)
+        }
+    }
+}
+
 extension WBNetworkManager {
     
     //请求访问acceesstoken
