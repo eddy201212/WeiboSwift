@@ -143,16 +143,25 @@ extension CZEmoticonInputView: CZEmoticonCellDelegate {
        // 执行闭包，回调选中的表情
         seletedEmoticonCallBack?(em)
         
+        // 添加最近使用的表情
         guard let em = em else {
             return
         }
         
+        // 如果当前 collectionView 就是最近的分组，不添加最近使用的表情
         let indexPath = collectionView.indexPathsForVisibleItems[0]
         if indexPath.section == 0 {
             return
         }
         
+        // 添加最近使用的表情
+        CZEmoticonManager.shared.recentEmoticon(em: em)
         
+        // 刷新数据 - 第 0 组
+        var indexSet = IndexSet()
+        indexSet.insert(0)
+        
+        collectionView.reloadSections(indexSet)
     }
 }
 

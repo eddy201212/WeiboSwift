@@ -28,6 +28,33 @@ class CZEmoticonManager {
     private init() {
         loadPackages()
     }
+    
+    
+    /// 添加最近使用的表情
+    ///
+    /// - Parameter em: 选中的表情
+    func recentEmoticon(em: CZEmoticon) {
+        
+        // 1. 增加表情的使用次数
+        em.times += 1
+        
+        // 2. 判断是否已经记录了该表情，如果没有记录，添加记录
+        if !packages[0].emoticons.contains(em) {
+         
+            packages[0].emoticons.append(em)
+        }
+        
+        // 3. 根据使用次数排序，使用次数高的排序靠前
+        packages[0].emoticons.sort {
+            $0.times > $1.times
+        }
+        
+        // 4. 判断表情数组是否超出 20，如果超出，删除末尾的表情
+        if packages[0].emoticons.count > 20 {
+            
+            packages[0].emoticons.removeSubrange(20..<packages[0].emoticons.count)
+        }
+    }
 }
 
 // MARK: - 表情包数据处理
