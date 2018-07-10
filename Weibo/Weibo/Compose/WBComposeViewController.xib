@@ -85,7 +85,7 @@ Cg
                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                     </attributes>
                 </fragment>
-                <fragment content="重名重名重名">
+                <fragment content="天涯明月刀">
                     <attributes>
                         <color key="NSColor" red="0.46815891806386628" green="0.47279415487637977" blue="0.47279415487637977" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <font key="NSFont" size="10" name=".PingFangSC-Regular"/>
