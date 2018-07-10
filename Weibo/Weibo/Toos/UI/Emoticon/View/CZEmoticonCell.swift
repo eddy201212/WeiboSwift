@@ -82,6 +82,8 @@ extension CZEmoticonCell {
         // 1. 取 tag 0~20 20 对应的是删除按钮
         let tag = btn.tag
         
+        print("点击按钮\(btn.tag)")
+        
         // 2. 根据 tag 判断是否是删除按钮，如果不是删除按钮，取得表情
         var em: CZEmoticon?
         if tag < (emoticons?.count)! {
@@ -147,9 +149,9 @@ extension CZEmoticonCell {
         removeButton.setImage(image, for: [])
         
         // 添加长按手势
-        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longGesture))
-        
-        longPress.minimumPressDuration = 0.1
-        addGestureRecognizer(longPress)
+//        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longGesture))
+//        
+//        longPress.minimumPressDuration = 0.1
+//        addGestureRecognizer(longPress)
     }
 }

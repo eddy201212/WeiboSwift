@@ -22,8 +22,7 @@ class WBComposeViewController: UIViewController {
     
     /// 表情输入视图
     lazy var emoticonView = CZEmoticonInputView.inputView { (emoticon) in
-        
-        //print(emoticon)
+
         self.textView.insertEmoticon(em: emoticon)
     }
     
@@ -71,22 +70,25 @@ extension WBComposeViewController {
     /// 发布微博
     @IBAction func postStatus() {
         
-        print("发送微博的内容\(textView.text)")
+        // 1. 获取发送给服务器的表情微博文字
+        let text = textView.emoticonText
+        print("发送微博的内容\(text)")
         
+        // 2. 发布微博
         WBNetworkManager.shared.postStatus(text: textView.text) { (result, isSuccess) in
-            
+
             // 修改指示器样式
             SVProgressHUD.setDefaultStyle(.dark)
-            
+
             let message = isSuccess ? "发布成功" : "网络不给力"
-            
+
             SVProgressHUD.showInfo(withStatus: message)
-            
+
             // 如果成功，延迟一段时间关闭当前窗口
             if isSuccess {
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    
+
                     // 恢复样式
                     SVProgressHUD.setDefaultStyle(.light)
                     self.close()
@@ -95,6 +97,8 @@ extension WBComposeViewController {
         }
     }
     
+    
+    /// 切换表情键盘
     @objc func emoticonKeyboard() {
         
         // 2> 设置键盘视图
