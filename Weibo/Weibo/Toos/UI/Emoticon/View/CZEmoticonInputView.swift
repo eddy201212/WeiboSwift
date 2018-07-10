@@ -14,8 +14,10 @@ class CZEmoticonInputView: UIView {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var toolbar: UIView!
+    @IBOutlet weak var toolbar: CZEmoticonToolbar!
 
+    @IBOutlet weak var toolbarBottomCons: NSLayoutConstraint!
+    
     fileprivate var seletedEmoticonCallBack: ((_ emoticon: CZEmoticon?)->())?
     
     class func inputView(selectedEmoticon: @escaping(_ emoticon: CZEmoticon?)->()) -> CZEmoticonInputView {
@@ -37,6 +39,8 @@ class CZEmoticonInputView: UIView {
         
         collectionView.register(CZEmoticonCell.self, forCellWithReuseIdentifier: cellId)
         
+        // 设置工具栏代理
+        toolbar.delegate = self
         
         // 设置分页控件的图片
         let bundle = CZEmoticonManager.shared.bundle
@@ -54,6 +58,8 @@ class CZEmoticonInputView: UIView {
         // 使用 KVC 设置私有成员属性
         pageControl.setValue(normalImage, forKey: "_pageImage")
         pageControl.setValue(selectedImage, forKey: "_currentPageImage")
+        
+        toolbarBottomCons.constant = -bottomSafeMargin
     }
 }
 
@@ -167,3 +173,17 @@ extension CZEmoticonInputView: CZEmoticonCellDelegate {
 
 
 
+// MARK: - CZEmoticonToolbarDelegate
+extension CZEmoticonInputView: CZEmoticonToolbarDelegate {
+    
+    func emoticonToolbarDidSelectedItemIndex(toolbar: CZEmoticonToolbar, index: Int) {
+        
+        // 让 collectionView 发生滚动 -> 每一个分组的第0页
+        let indexPath = IndexPath(item: 0, section: index)
+        
+        collectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+        
+        // 设置分组按钮的选中状态
+        toolbar.selectedIndex = index
+    }
+}
