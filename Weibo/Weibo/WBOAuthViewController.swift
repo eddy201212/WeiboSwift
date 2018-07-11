@@ -13,6 +13,10 @@ class WBOAuthViewController: UIViewController {
 
     fileprivate lazy var webView = UIWebView()
     
+    
+    // MARK: - 控制器生命周期
+    // TODO: 未完待续
+    // FIXME: 修复
     override func loadView() {
         
         view = webView
@@ -41,6 +45,8 @@ class WBOAuthViewController: UIViewController {
     }
 }
 
+
+// MARK: - UIWebViewDelegate
 extension WBOAuthViewController: UIWebViewDelegate {
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -79,6 +85,8 @@ extension WBOAuthViewController: UIWebViewDelegate {
     }
 }
 
+
+// MARK: - 方法处理
 extension WBOAuthViewController {
     
     @objc fileprivate func close() {
