@@ -32,6 +32,11 @@ class WBTabarViewController: UITabBarController {
         setupComposeButton()
         setupTimer()
         
+        let v = WBNewFeatureView.newFeatureView()
+        // 2. 添加视图
+        view.addSubview(v)
+        
+        
         NotificationCenter.default.addObserver(self, selector: #selector(userLogin), name: NSNotification.Name(WBUserShouldLoginNotification), object: nil)
     }
     
