@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5D96E1A3AD0CCF664F03F63A /* Pods_Weibo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1DB502D44F86724B18694 /* Pods_Weibo.framework */; };
+		64070AD020F59C7B00EC8EDB /* CZRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64070ACF20F59C7B00EC8EDB /* CZRefreshView.swift */; };
+		64070AD220F59C9000EC8EDB /* CZRefreshView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64070AD120F59C9000EC8EDB /* CZRefreshView.xib */; };
+		64070AD420F59F0100EC8EDB /* CZRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64070AD320F59F0100EC8EDB /* CZRefreshControl.swift */; };
 		6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08120DCF39F00ADA004 /* WBStatus.swift */; };
 		6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6408A08320DCFDC800ADA004 /* Date+Extension.swift */; };
 		640BC6EA20F48F470084B339 /* CZEmoticonTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 640BC6E920F48F460084B339 /* CZEmoticonTipView.swift */; };
@@ -75,6 +78,9 @@
 
 /* Begin PBXFileReference section */
 		63A1DB502D44F86724B18694 /* Pods_Weibo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weibo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64070ACF20F59C7B00EC8EDB /* CZRefreshView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZRefreshView.swift; sourceTree = "<group>"; };
+		64070AD120F59C9000EC8EDB /* CZRefreshView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CZRefreshView.xib; sourceTree = "<group>"; };
+		64070AD320F59F0100EC8EDB /* CZRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZRefreshControl.swift; sourceTree = "<group>"; };
 		6408A08120DCF39F00ADA004 /* WBStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatus.swift; sourceTree = "<group>"; };
 		6408A08320DCFDC800ADA004 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		640BC6E920F48F460084B339 /* CZEmoticonTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZEmoticonTipView.swift; sourceTree = "<group>"; };
@@ -162,6 +168,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64070ACE20F5995000EC8EDB /* CZRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				64070AD320F59F0100EC8EDB /* CZRefreshControl.swift */,
+				64070ACF20F59C7B00EC8EDB /* CZRefreshView.swift */,
+				64070AD120F59C9000EC8EDB /* CZRefreshView.xib */,
+			);
+			path = CZRefreshControl;
+			sourceTree = "<group>";
+		};
 		6412E2C120D8AF7F001DDBE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +221,7 @@
 		6452796120EF633000E461F1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				64070ACE20F5995000EC8EDB /* CZRefreshControl */,
 				6452796220EF633000E461F1 /* Emoticon */,
 			);
 			path = UI;
@@ -495,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64070AD220F59C9000EC8EDB /* CZRefreshView.xib in Resources */,
 				6452797320EF633000E461F1 /* CZEmoticonInputView.xib in Resources */,
 				64B6ABA320ECC580006E6126 /* WBComposeTypeButton.xib in Resources */,
 				64DA1A7120D0F90C00B5F654 /* main.json in Resources */,
@@ -615,7 +633,9 @@
 				8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */,
 				64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */,
 				64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */,
+				64070AD020F59C7B00EC8EDB /* CZRefreshView.swift in Sources */,
 				6452797220EF633000E461F1 /* CZEmoticonInputView.swift in Sources */,
+				64070AD420F59F0100EC8EDB /* CZRefreshControl.swift in Sources */,
 				8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */,
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
 				8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */,

@@ -17,7 +17,7 @@ class WBBaseViewController: UIViewController{
     
     var visitorDictionary: [String: String]?
     
-    var refreshControl: UIRefreshControl?
+    var refreshControl: CZRefreshControl?
     
     var isPullup = false
     
@@ -49,7 +49,7 @@ class WBBaseViewController: UIViewController{
     }
     
     // 加载数据 － 具体的实现由子类负责
-    func loadData() {
+    @objc func loadData() {
         // 如果子类不实现任何方法， 默认关闭
         refreshControl?.endRefreshing()
     }
@@ -152,6 +152,12 @@ extension WBBaseViewController {
         
         tableView?.contentInset = UIEdgeInsetsMake(44, 0, 0, 0)
         //tableView?.scrollIndicatorInsets = tableView!.contentInset
+        
+        refreshControl = CZRefreshControl()
+        
+//        tableView?.addSubview(refreshControl!)
+//        
+//        refreshControl?.addTarget(self, action: #selector(loadData), for: .valueChanged)
     }
     
     func loadMore() {
