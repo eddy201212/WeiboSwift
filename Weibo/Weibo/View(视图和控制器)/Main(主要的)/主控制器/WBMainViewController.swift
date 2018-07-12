@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WBTabarViewController: UITabBarController {
+class WBMainViewController: UITabBarController {
 
     lazy fileprivate var composeButton: UIButton = {
         let btn = UIButton()
@@ -71,7 +71,7 @@ class WBTabarViewController: UITabBarController {
 }
 
 // MARK: - 新特性视图处理
-extension WBTabarViewController {
+extension WBMainViewController {
     
     
     /// 设置新特性视图
@@ -83,7 +83,7 @@ extension WBTabarViewController {
         }
         
         // 1.如果更新，显示新特性，否则显示欢迎
-        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBWelcomeView.welcomeView()        
+        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBWelcomeView.welcomeView()
         view.addSubview(v)
     }
     
@@ -105,7 +105,7 @@ extension WBTabarViewController {
     }
 }
 
-extension WBTabarViewController {
+extension WBMainViewController {
     
     func setupTimer() {
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -126,7 +126,7 @@ extension WBTabarViewController {
     }
 }
 
-extension WBTabarViewController {
+extension WBMainViewController {
     
     fileprivate func setupComposeButton() {
         tabBar.addSubview(composeButton)

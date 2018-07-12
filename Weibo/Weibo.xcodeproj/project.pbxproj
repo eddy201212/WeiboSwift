@@ -43,7 +43,7 @@
 		64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A1118F20CFCB5F002B7E12 /* Assets.xcassets */; };
 		64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A1119120CFCB5F002B7E12 /* LaunchScreen.storyboard */; };
 		64A1119B20CFD58E002B7E12 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1119A20CFD58E002B7E12 /* WBBaseViewController.swift */; };
-		64A1119D20CFD655002B7E12 /* WBTabarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1119C20CFD655002B7E12 /* WBTabarViewController.swift */; };
+		64A1119D20CFD655002B7E12 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1119C20CFD655002B7E12 /* WBMainViewController.swift */; };
 		64A1119F20CFD686002B7E12 /* WBNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1119E20CFD686002B7E12 /* WBNavigationViewController.swift */; };
 		64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7120E1E40100146A40 /* WBStatusCell.swift */; };
 		64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64ADAF7320E1E73E00146A40 /* WBStatusViewModel.swift */; };
@@ -130,7 +130,7 @@
 		64A1119220CFCB5F002B7E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A1119420CFCB5F002B7E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A1119A20CFD58E002B7E12 /* WBBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
-		64A1119C20CFD655002B7E12 /* WBTabarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBTabarViewController.swift; sourceTree = "<group>"; };
+		64A1119C20CFD655002B7E12 /* WBMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		64A1119E20CFD686002B7E12 /* WBNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBNavigationViewController.swift; sourceTree = "<group>"; };
 		64ADAF7120E1E40100146A40 /* WBStatusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusCell.swift; sourceTree = "<group>"; };
 		64ADAF7320E1E73E00146A40 /* WBStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBStatusViewModel.swift; sourceTree = "<group>"; };
@@ -221,7 +221,7 @@
 			path = CZRefreshControl;
 			sourceTree = "<group>";
 		};
-		64070AD520F607C000EC8EDB /* NewFeature */ = {
+		64070AD520F607C000EC8EDB /* NewFeature(新特性) */ = {
 			isa = PBXGroup;
 			children = (
 				64070AD620F6082900EC8EDB /* WBNewFeatureView.swift */,
@@ -229,10 +229,10 @@
 				64D3B6C520F6F94300089D66 /* WBWelcomeView.swift */,
 				64D3B6C720F6F95200089D66 /* WBWelcomeView.xib */,
 			);
-			path = NewFeature;
+			path = "NewFeature(新特性)";
 			sourceTree = "<group>";
 		};
-		6412E2C120D8AF7F001DDBE4 /* Model */ = {
+		6412E2C120D8AF7F001DDBE4 /* Model(模型) */ = {
 			isa = PBXGroup;
 			children = (
 				6412E2C320D8AFAD001DDBE4 /* WBUserAccount.swift */,
@@ -240,17 +240,17 @@
 				64ADAF7520E1E90300146A40 /* WBStatusPicture.swift */,
 				64ADAF7720E20F6C00146A40 /* WBUser.swift */,
 			);
-			path = Model;
+			path = "Model(模型)";
 			sourceTree = "<group>";
 		};
-		6412E2C220D8AF87001DDBE4 /* ViewModel */ = {
+		6412E2C220D8AF87001DDBE4 /* ViewModel(视图模型) */ = {
 			isa = PBXGroup;
 			children = (
 				64ADAF7320E1E73E00146A40 /* WBStatusViewModel.swift */,
 				641A6C2E20E33AFC00BB07DF /* WBStatusListViewModel.swift */,
 				641A6C3020E3619900BB07DF /* WBStatusListDAL.swift */,
 			);
-			path = ViewModel;
+			path = "ViewModel(视图模型)";
 			sourceTree = "<group>";
 		};
 		64347FEA20F3557A004D54C1 /* ComposeType */ = {
@@ -337,35 +337,24 @@
 			isa = PBXGroup;
 			children = (
 				64A1118820CFCB46002B7E12 /* AppDelegate.swift */,
-				64C299D720D3B7A5008E2327 /* WBVisitorView.swift */,
-				644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */,
-				64A111A320CFDBD4002B7E12 /* Home */,
-				64A111A420CFDBD9002B7E12 /* Message */,
-				64A111A620CFDBF7002B7E12 /* Compose */,
-				64A111A520CFDBE6002B7E12 /* Discover */,
-				64DA1A5E20D0B4C300B5F654 /* Me */,
-				64070AD520F607C000EC8EDB /* NewFeature */,
-				64DA1A6A20D0C87A00B5F654 /* Toos */,
-				8DF48BA420E68FD7006E1DD1 /* Vender */,
-				64A111A120CFD6B3002B7E12 /* Base */,
-				6412E2C220D8AF87001DDBE4 /* ViewModel */,
-				6412E2C120D8AF7F001DDBE4 /* Model */,
-				64DA1A7220D0FE2900B5F654 /* Extension */,
-				64D3B69F20F6F15E00089D66 /* Additions */,
 				8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */,
+				64D3B6C920F726B400089D66 /* View(视图和控制器) */,
+				6412E2C220D8AF87001DDBE4 /* ViewModel(视图模型) */,
+				6412E2C120D8AF7F001DDBE4 /* Model(模型) */,
+				64DA1A6A20D0C87A00B5F654 /* Toos(工具) */,
+				64A111A120CFD6B3002B7E12 /* Base(基础类) */,
 				64A111A220CFDBC6002B7E12 /* Resources */,
 			);
 			path = Weibo;
 			sourceTree = "<group>";
 		};
-		64A111A120CFD6B3002B7E12 /* Base */ = {
+		64A111A120CFD6B3002B7E12 /* Base(基础类) */ = {
 			isa = PBXGroup;
 			children = (
 				64A1119A20CFD58E002B7E12 /* WBBaseViewController.swift */,
-				64A1119C20CFD655002B7E12 /* WBTabarViewController.swift */,
 				64A1119E20CFD686002B7E12 /* WBNavigationViewController.swift */,
 			);
-			path = Base;
+			path = "Base(基础类)";
 			sourceTree = "<group>";
 		};
 		64A111A220CFDBC6002B7E12 /* Resources */ = {
@@ -379,19 +368,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		64A111A320CFDBD4002B7E12 /* Home */ = {
+		64A111A320CFDBD4002B7E12 /* Home(首页) */ = {
 			isa = PBXGroup;
 			children = (
+				64D3B6CE20F72A9000089D66 /* StatusCell */,
+				64D3B6CF20F72AB700089D66 /* TitleButton */,
 				64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */,
-				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
-				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
 				641A6C2C20E3367B00BB07DF /* WBWebViewController.swift */,
-				640E1A0720E47FEC00A2140F /* WBStatusRetweetedCell.xib */,
-				64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */,
-				640E1A0D20E4CC6400A2140F /* WBStatusToolBar.swift */,
-				640E1A0F20E4D93E00A2140F /* WBStatusPictureView.swift */,
 			);
-			path = Home;
+			path = "Home(首页)";
 			sourceTree = "<group>";
 		};
 		64A111A420CFDBD9002B7E12 /* Message */ = {
@@ -410,15 +395,15 @@
 			path = Discover;
 			sourceTree = "<group>";
 		};
-		64A111A620CFDBF7002B7E12 /* Compose */ = {
+		64A111A620CFDBF7002B7E12 /* Compose(撰写微博) */ = {
 			isa = PBXGroup;
 			children = (
 				64347FEB20F3558F004D54C1 /* View */,
+				64347FEA20F3557A004D54C1 /* ComposeType */,
 				64DA1A6520D0B87F00B5F654 /* WBComposeViewController.swift */,
 				64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */,
-				64347FEA20F3557A004D54C1 /* ComposeType */,
 			);
-			path = Compose;
+			path = "Compose(撰写微博)";
 			sourceTree = "<group>";
 		};
 		64D3B69F20F6F15E00089D66 /* Additions */ = {
@@ -453,6 +438,74 @@
 			path = Additions;
 			sourceTree = "<group>";
 		};
+		64D3B6C920F726B400089D66 /* View(视图和控制器) */ = {
+			isa = PBXGroup;
+			children = (
+				64D3B6CA20F7287D00089D66 /* Main(主要的) */,
+				64A111A320CFDBD4002B7E12 /* Home(首页) */,
+				64A111A620CFDBF7002B7E12 /* Compose(撰写微博) */,
+				64A111A420CFDBD9002B7E12 /* Message */,
+				64A111A520CFDBE6002B7E12 /* Discover */,
+				64DA1A5E20D0B4C300B5F654 /* Me */,
+			);
+			path = "View(视图和控制器)";
+			sourceTree = "<group>";
+		};
+		64D3B6CA20F7287D00089D66 /* Main(主要的) */ = {
+			isa = PBXGroup;
+			children = (
+				64D3B6CD20F729CE00089D66 /* VisitorView(访客视图) */,
+				64D3B6CB20F7296000089D66 /* 主控制器 */,
+				64D3B6CC20F7298900089D66 /* OAuth(授权) */,
+				64070AD520F607C000EC8EDB /* NewFeature(新特性) */,
+			);
+			path = "Main(主要的)";
+			sourceTree = "<group>";
+		};
+		64D3B6CB20F7296000089D66 /* 主控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				64A1119C20CFD655002B7E12 /* WBMainViewController.swift */,
+			);
+			path = "主控制器";
+			sourceTree = "<group>";
+		};
+		64D3B6CC20F7298900089D66 /* OAuth(授权) */ = {
+			isa = PBXGroup;
+			children = (
+				644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */,
+			);
+			path = "OAuth(授权)";
+			sourceTree = "<group>";
+		};
+		64D3B6CD20F729CE00089D66 /* VisitorView(访客视图) */ = {
+			isa = PBXGroup;
+			children = (
+				64C299D720D3B7A5008E2327 /* WBVisitorView.swift */,
+			);
+			path = "VisitorView(访客视图)";
+			sourceTree = "<group>";
+		};
+		64D3B6CE20F72A9000089D66 /* StatusCell */ = {
+			isa = PBXGroup;
+			children = (
+				64ADAF7120E1E40100146A40 /* WBStatusCell.swift */,
+				640E1A0720E47FEC00A2140F /* WBStatusRetweetedCell.xib */,
+				64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */,
+				640E1A0D20E4CC6400A2140F /* WBStatusToolBar.swift */,
+				640E1A0F20E4D93E00A2140F /* WBStatusPictureView.swift */,
+			);
+			path = StatusCell;
+			sourceTree = "<group>";
+		};
+		64D3B6CF20F72AB700089D66 /* TitleButton */ = {
+			isa = PBXGroup;
+			children = (
+				64ADAF7920E235C600146A40 /* WBTitleButton.swift */,
+			);
+			path = TitleButton;
+			sourceTree = "<group>";
+		};
 		64DA1A5E20D0B4C300B5F654 /* Me */ = {
 			isa = PBXGroup;
 			children = (
@@ -461,14 +514,17 @@
 			path = Me;
 			sourceTree = "<group>";
 		};
-		64DA1A6A20D0C87A00B5F654 /* Toos */ = {
+		64DA1A6A20D0C87A00B5F654 /* Toos(工具) */ = {
 			isa = PBXGroup;
 			children = (
+				64D3B69F20F6F15E00089D66 /* Additions */,
+				8DF48BA420E68FD7006E1DD1 /* Vender */,
+				64DA1A7220D0FE2900B5F654 /* Extension */,
 				6452796120EF633000E461F1 /* UI */,
 				64DA1A6D20D0F25900B5F654 /* Network */,
 				6412E2C520D8DEEA001DDBE4 /* WeiboCommon.swift */,
 			);
-			path = Toos;
+			path = "Toos(工具)";
 			sourceTree = "<group>";
 		};
 		64DA1A6D20D0F25900B5F654 /* Network */ = {
@@ -721,7 +777,7 @@
 				6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */,
 				64D3B6BC20F6F15E00089D66 /* NSString+CZBase64.m in Sources */,
 				64A1119F20CFD686002B7E12 /* WBNavigationViewController.swift in Sources */,
-				64A1119D20CFD655002B7E12 /* WBTabarViewController.swift in Sources */,
+				64A1119D20CFD655002B7E12 /* WBMainViewController.swift in Sources */,
 				64D3B6C220F6F15E00089D66 /* UIScreen+CZAddition.m in Sources */,
 				640E1A0E20E4CC6400A2140F /* WBStatusToolBar.swift in Sources */,
 				64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */,
