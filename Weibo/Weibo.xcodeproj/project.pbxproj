@@ -40,7 +40,6 @@
 		6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452796C20EF633000E461F1 /* CZEmoticonLayout.swift */; };
 		6452797620EF643000E461F1 /* CZEmoticonPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6452797520EF643000E461F1 /* CZEmoticonPackage.swift */; };
 		64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118820CFCB46002B7E12 /* AppDelegate.swift */; };
-		64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1118A20CFCB46002B7E12 /* ViewController.swift */; };
 		64A1119020CFCB5F002B7E12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A1118F20CFCB5F002B7E12 /* Assets.xcassets */; };
 		64A1119320CFCB5F002B7E12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A1119120CFCB5F002B7E12 /* LaunchScreen.storyboard */; };
 		64A1119B20CFD58E002B7E12 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64A1119A20CFD58E002B7E12 /* WBBaseViewController.swift */; };
@@ -127,7 +126,6 @@
 		6452797520EF643000E461F1 /* CZEmoticonPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CZEmoticonPackage.swift; sourceTree = "<group>"; };
 		64A1118520CFCB46002B7E12 /* Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64A1118820CFCB46002B7E12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		64A1118A20CFCB46002B7E12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		64A1118F20CFCB5F002B7E12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64A1119220CFCB5F002B7E12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64A1119420CFCB5F002B7E12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -338,10 +336,7 @@
 		64A1118720CFCB46002B7E12 /* Weibo */ = {
 			isa = PBXGroup;
 			children = (
-				64070AD520F607C000EC8EDB /* NewFeature */,
-				8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */,
 				64A1118820CFCB46002B7E12 /* AppDelegate.swift */,
-				64A1118A20CFCB46002B7E12 /* ViewController.swift */,
 				64C299D720D3B7A5008E2327 /* WBVisitorView.swift */,
 				644EFD3420D9F54B00CEDF7A /* WBOAuthViewController.swift */,
 				64A111A320CFDBD4002B7E12 /* Home */,
@@ -349,6 +344,7 @@
 				64A111A620CFDBF7002B7E12 /* Compose */,
 				64A111A520CFDBE6002B7E12 /* Discover */,
 				64DA1A5E20D0B4C300B5F654 /* Me */,
+				64070AD520F607C000EC8EDB /* NewFeature */,
 				64DA1A6A20D0C87A00B5F654 /* Toos */,
 				8DF48BA420E68FD7006E1DD1 /* Vender */,
 				64A111A120CFD6B3002B7E12 /* Base */,
@@ -356,6 +352,7 @@
 				6412E2C120D8AF7F001DDBE4 /* Model */,
 				64DA1A7220D0FE2900B5F654 /* Extension */,
 				64D3B69F20F6F15E00089D66 /* Additions */,
+				8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */,
 				64A111A220CFDBC6002B7E12 /* Resources */,
 			);
 			path = Weibo;
@@ -706,7 +703,6 @@
 				64D3B6BF20F6F15E00089D66 /* UIButton+CZAddition.m in Sources */,
 				8D5FBE8620E72E4000B5966D /* HMPhotoBrowserAnimator.m in Sources */,
 				64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */,
-				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
 				64DA1A6220D0B85D00B5F654 /* WBMessageViewController.swift in Sources */,
 				6452796F20EF633000E461F1 /* CZEmoticon.swift in Sources */,
 				64ADAF7420E1E73E00146A40 /* WBStatusViewModel.swift in Sources */,
