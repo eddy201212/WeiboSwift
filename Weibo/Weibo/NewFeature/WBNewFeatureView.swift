@@ -77,7 +77,7 @@ extension WBNewFeatureView: UIScrollViewDelegate{
         }
         
         // 3. 如果是倒数第2页，显示按钮
-        enterButton.isHidden = (page == scrollView.subviews.count - 1)
+        enterButton.isHidden = (page != scrollView.subviews.count - 1)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

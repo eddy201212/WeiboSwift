@@ -59,6 +59,18 @@
 		64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C299D720D3B7A5008E2327 /* WBVisitorView.swift */; };
 		64C88CD220EE0AD2005274BD /* WBComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */; };
 		64C88CD420EE1964005274BD /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64C88CD320EE1964005274BD /* UIDevice+Extension.swift */; };
+		64D3B6B920F6F15E00089D66 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6A220F6F15E00089D66 /* NSArray+Log.m */; };
+		64D3B6BA20F6F15E00089D66 /* NSAttributedString+CZAdditon.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6A420F6F15E00089D66 /* NSAttributedString+CZAdditon.m */; };
+		64D3B6BB20F6F15E00089D66 /* NSObject+CZRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6A620F6F15E00089D66 /* NSObject+CZRuntime.m */; };
+		64D3B6BC20F6F15E00089D66 /* NSString+CZBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6A820F6F15E00089D66 /* NSString+CZBase64.m */; };
+		64D3B6BD20F6F15E00089D66 /* NSString+CZHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6AA20F6F15E00089D66 /* NSString+CZHash.m */; };
+		64D3B6BE20F6F15E00089D66 /* NSString+CZPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6AC20F6F15E00089D66 /* NSString+CZPath.m */; };
+		64D3B6BF20F6F15E00089D66 /* UIButton+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6AE20F6F15E00089D66 /* UIButton+CZAddition.m */; };
+		64D3B6C020F6F15E00089D66 /* UIColor+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6B020F6F15E00089D66 /* UIColor+CZAddition.m */; };
+		64D3B6C120F6F15E00089D66 /* UILabel+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6B220F6F15E00089D66 /* UILabel+CZAddition.m */; };
+		64D3B6C220F6F15E00089D66 /* UIScreen+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6B420F6F15E00089D66 /* UIScreen+CZAddition.m */; };
+		64D3B6C320F6F15E00089D66 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6B620F6F15E00089D66 /* UIView+CZAddition.m */; };
+		64D3B6C420F6F15E00089D66 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 64D3B6B820F6F15E00089D66 /* UIViewController+CZAddition.m */; };
 		64D7A58120D218920017E236 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58020D218920017E236 /* UIColor+Extension.swift */; };
 		64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */; };
 		64DA1A6020D0B84800B5F654 /* WBHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */; };
@@ -133,6 +145,31 @@
 		64C299D720D3B7A5008E2327 /* WBVisitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBVisitorView.swift; sourceTree = "<group>"; };
 		64C88CD120EE0AD2005274BD /* WBComposeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBComposeViewController.xib; sourceTree = "<group>"; };
 		64C88CD320EE1964005274BD /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		64D3B6A020F6F15E00089D66 /* CZAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZAdditions.h; sourceTree = "<group>"; };
+		64D3B6A120F6F15E00089D66 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		64D3B6A220F6F15E00089D66 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		64D3B6A320F6F15E00089D66 /* NSAttributedString+CZAdditon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+CZAdditon.h"; sourceTree = "<group>"; };
+		64D3B6A420F6F15E00089D66 /* NSAttributedString+CZAdditon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+CZAdditon.m"; sourceTree = "<group>"; };
+		64D3B6A520F6F15E00089D66 /* NSObject+CZRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CZRuntime.h"; sourceTree = "<group>"; };
+		64D3B6A620F6F15E00089D66 /* NSObject+CZRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CZRuntime.m"; sourceTree = "<group>"; };
+		64D3B6A720F6F15E00089D66 /* NSString+CZBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZBase64.h"; sourceTree = "<group>"; };
+		64D3B6A820F6F15E00089D66 /* NSString+CZBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZBase64.m"; sourceTree = "<group>"; };
+		64D3B6A920F6F15E00089D66 /* NSString+CZHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZHash.h"; sourceTree = "<group>"; };
+		64D3B6AA20F6F15E00089D66 /* NSString+CZHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZHash.m"; sourceTree = "<group>"; };
+		64D3B6AB20F6F15E00089D66 /* NSString+CZPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CZPath.h"; sourceTree = "<group>"; };
+		64D3B6AC20F6F15E00089D66 /* NSString+CZPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CZPath.m"; sourceTree = "<group>"; };
+		64D3B6AD20F6F15E00089D66 /* UIButton+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6AE20F6F15E00089D66 /* UIButton+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CZAddition.m"; sourceTree = "<group>"; };
+		64D3B6AF20F6F15E00089D66 /* UIColor+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6B020F6F15E00089D66 /* UIColor+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CZAddition.m"; sourceTree = "<group>"; };
+		64D3B6B120F6F15E00089D66 /* UILabel+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6B220F6F15E00089D66 /* UILabel+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+CZAddition.m"; sourceTree = "<group>"; };
+		64D3B6B320F6F15E00089D66 /* UIScreen+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScreen+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6B420F6F15E00089D66 /* UIScreen+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScreen+CZAddition.m"; sourceTree = "<group>"; };
+		64D3B6B520F6F15E00089D66 /* UIView+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6B620F6F15E00089D66 /* UIView+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CZAddition.m"; sourceTree = "<group>"; };
+		64D3B6B720F6F15E00089D66 /* UIViewController+CZAddition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CZAddition.h"; sourceTree = "<group>"; };
+		64D3B6B820F6F15E00089D66 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		64D7A58020D218920017E236 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		64D7A58220D25E600017E236 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		64DA1A5F20D0B84800B5F654 /* WBHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBHomeViewController.swift; sourceTree = "<group>"; };
@@ -312,6 +349,7 @@
 				6412E2C220D8AF87001DDBE4 /* ViewModel */,
 				6412E2C120D8AF7F001DDBE4 /* Model */,
 				64DA1A7220D0FE2900B5F654 /* Extension */,
+				64D3B69F20F6F15E00089D66 /* Additions */,
 				64A111A220CFDBC6002B7E12 /* Resources */,
 			);
 			path = Weibo;
@@ -378,6 +416,38 @@
 				64347FEA20F3557A004D54C1 /* ComposeType */,
 			);
 			path = Compose;
+			sourceTree = "<group>";
+		};
+		64D3B69F20F6F15E00089D66 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				64D3B6A020F6F15E00089D66 /* CZAdditions.h */,
+				64D3B6A120F6F15E00089D66 /* NSArray+Log.h */,
+				64D3B6A220F6F15E00089D66 /* NSArray+Log.m */,
+				64D3B6A320F6F15E00089D66 /* NSAttributedString+CZAdditon.h */,
+				64D3B6A420F6F15E00089D66 /* NSAttributedString+CZAdditon.m */,
+				64D3B6A520F6F15E00089D66 /* NSObject+CZRuntime.h */,
+				64D3B6A620F6F15E00089D66 /* NSObject+CZRuntime.m */,
+				64D3B6A720F6F15E00089D66 /* NSString+CZBase64.h */,
+				64D3B6A820F6F15E00089D66 /* NSString+CZBase64.m */,
+				64D3B6A920F6F15E00089D66 /* NSString+CZHash.h */,
+				64D3B6AA20F6F15E00089D66 /* NSString+CZHash.m */,
+				64D3B6AB20F6F15E00089D66 /* NSString+CZPath.h */,
+				64D3B6AC20F6F15E00089D66 /* NSString+CZPath.m */,
+				64D3B6AD20F6F15E00089D66 /* UIButton+CZAddition.h */,
+				64D3B6AE20F6F15E00089D66 /* UIButton+CZAddition.m */,
+				64D3B6AF20F6F15E00089D66 /* UIColor+CZAddition.h */,
+				64D3B6B020F6F15E00089D66 /* UIColor+CZAddition.m */,
+				64D3B6B120F6F15E00089D66 /* UILabel+CZAddition.h */,
+				64D3B6B220F6F15E00089D66 /* UILabel+CZAddition.m */,
+				64D3B6B320F6F15E00089D66 /* UIScreen+CZAddition.h */,
+				64D3B6B420F6F15E00089D66 /* UIScreen+CZAddition.m */,
+				64D3B6B520F6F15E00089D66 /* UIView+CZAddition.h */,
+				64D3B6B620F6F15E00089D66 /* UIView+CZAddition.m */,
+				64D3B6B720F6F15E00089D66 /* UIViewController+CZAddition.h */,
+				64D3B6B820F6F15E00089D66 /* UIViewController+CZAddition.m */,
+			);
+			path = Additions;
 			sourceTree = "<group>";
 		};
 		64DA1A5E20D0B4C300B5F654 /* Me */ = {
@@ -601,26 +671,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64D3B6C020F6F15E00089D66 /* UIColor+CZAddition.m in Sources */,
 				64DA1A6420D0B86D00B5F654 /* WBDiscoverViewController.swift in Sources */,
 				6452797020EF633000E461F1 /* CZEmoticonAttachment.swift in Sources */,
 				64ADAF7820E20F6C00146A40 /* WBUser.swift in Sources */,
+				64D3B6C320F6F15E00089D66 /* UIView+CZAddition.m in Sources */,
 				6408A08420DCFDC800ADA004 /* Date+Extension.swift in Sources */,
 				64DA1A6C20D0C89B00B5F654 /* WBNetworkManager.swift in Sources */,
 				6412E2C620D8DEEA001DDBE4 /* WeiboCommon.swift in Sources */,
 				641A6C2F20E33AFC00BB07DF /* WBStatusListViewModel.swift in Sources */,
 				64C299D820D3B7A5008E2327 /* WBVisitorView.swift in Sources */,
 				64B6AB9D20ECAA84006E6126 /* WBComposeTypeView.swift in Sources */,
+				64D3B6B920F6F15E00089D66 /* NSArray+Log.m in Sources */,
 				6452797620EF643000E461F1 /* CZEmoticonPackage.swift in Sources */,
 				640E1A0A20E4C2AE00A2140F /* UIImageView+SDWebImage.swift in Sources */,
 				64B6AB9620EC6BB3006E6126 /* String+Extension.swift in Sources */,
 				6412E2C420D8AFAD001DDBE4 /* WBUserAccount.swift in Sources */,
+				64D3B6BD20F6F15E00089D66 /* NSString+CZHash.m in Sources */,
 				64DA1A6820D0B89000B5F654 /* WBMeViewController.swift in Sources */,
+				64D3B6C120F6F15E00089D66 /* UILabel+CZAddition.m in Sources */,
 				6452796D20EF633000E461F1 /* CZEmoticonManager.swift in Sources */,
 				64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */,
 				64B6ABA120ECC56D006E6126 /* WBComposeTypeButton.swift in Sources */,
 				8D5FBE8520E72E4000B5966D /* HMPhotoProgressView.m in Sources */,
 				644EFD3520D9F54B00CEDF7A /* WBOAuthViewController.swift in Sources */,
 				64070AD720F6082A00EC8EDB /* WBNewFeatureView.swift in Sources */,
+				64D3B6BF20F6F15E00089D66 /* UIButton+CZAddition.m in Sources */,
 				8D5FBE8620E72E4000B5966D /* HMPhotoBrowserAnimator.m in Sources */,
 				64ADAF7A20E235C700146A40 /* WBTitleButton.swift in Sources */,
 				64A1118B20CFCB46002B7E12 /* ViewController.swift in Sources */,
@@ -639,8 +715,10 @@
 				641A6C3120E3619900BB07DF /* WBStatusListDAL.swift in Sources */,
 				640BC6EC20F4A52D0084B339 /* CZEmoticonToolbar.swift in Sources */,
 				6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */,
+				64D3B6BC20F6F15E00089D66 /* NSString+CZBase64.m in Sources */,
 				64A1119F20CFD686002B7E12 /* WBNavigationViewController.swift in Sources */,
 				64A1119D20CFD655002B7E12 /* WBTabarViewController.swift in Sources */,
+				64D3B6C220F6F15E00089D66 /* UIScreen+CZAddition.m in Sources */,
 				640E1A0E20E4CC6400A2140F /* WBStatusToolBar.swift in Sources */,
 				64A1118920CFCB46002B7E12 /* AppDelegate.swift in Sources */,
 				6408A08220DCF39F00ADA004 /* WBStatus.swift in Sources */,
@@ -650,11 +728,15 @@
 				64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */,
 				64ADAF7220E1E40100146A40 /* WBStatusCell.swift in Sources */,
 				64070AD020F59C7B00EC8EDB /* CZRefreshView.swift in Sources */,
+				64D3B6BA20F6F15E00089D66 /* NSAttributedString+CZAdditon.m in Sources */,
+				64D3B6BB20F6F15E00089D66 /* NSObject+CZRuntime.m in Sources */,
 				6452797220EF633000E461F1 /* CZEmoticonInputView.swift in Sources */,
 				64070AD420F59F0100EC8EDB /* CZRefreshControl.swift in Sources */,
+				64D3B6C420F6F15E00089D66 /* UIViewController+CZAddition.m in Sources */,
 				8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */,
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
 				8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */,
+				64D3B6BE20F6F15E00089D66 /* NSString+CZPath.m in Sources */,
 				640E1A1020E4D93E00A2140F /* WBStatusPictureView.swift in Sources */,
 				64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */,
 			);
