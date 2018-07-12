@@ -83,8 +83,7 @@ extension WBTabarViewController {
         }
         
         // 1.如果更新，显示新特性，否则显示欢迎
-        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBNewFeatureView.newFeatureView()
-        
+        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBWelcomeView.welcomeView()        
         view.addSubview(v)
     }
     
