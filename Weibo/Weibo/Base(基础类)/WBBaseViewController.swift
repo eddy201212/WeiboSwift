@@ -15,10 +15,13 @@ class WBBaseViewController: UIViewController{
     
     var tableView: UITableView?
     
+    /// 访客视图信息字典
     var visitorDictionary: [String: String]?
     
+    /// 刷新控件
     var refreshControl: CZRefreshControl?
     
+    /// 上拉加载更多标志
     var isPullup = false
     
     //lazy var navigationBar = UINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 88))
