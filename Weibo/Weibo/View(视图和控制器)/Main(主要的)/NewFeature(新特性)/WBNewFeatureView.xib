@@ -26,14 +26,16 @@
                     </state>
                     <state key="highlighted" backgroundImage="new_feature_finish_button_highlighted"/>
                     <connections>
-                        <action selector="enterStatus:" destination="Udj-4P-nLF" eventType="touchUpInside" id="1kB-P0-VQI"/>
+                        <action selector="enterStatus" destination="Udj-4P-nLF" eventType="touchUpInside" id="Shc-n8-jXy"/>
                     </connections>
                 </button>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-fg-kTp">
-                    <rect key="frame" x="168" y="524" width="39" height="37"/>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="fWk-fg-kTp">
+                    <rect key="frame" x="160" y="524" width="55" height="37"/>
+                    <color key="pageIndicatorTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="currentPageIndicatorTintColor" red="1" green="0.41606974920000001" blue="0.29486737480000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vQY-zT-C1K" firstAttribute="top" secondItem="Udj-4P-nLF" secondAttribute="top" id="1G9-Vh-GrX"/>
                 <constraint firstAttribute="bottom" secondItem="sQi-0r-4KZ" secondAttribute="bottom" constant="162" id="4uV-Wb-Ppp"/>

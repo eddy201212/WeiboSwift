@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WBTabarViewController: UITabBarController {
+class WBMainViewController: UITabBarController {
 
     lazy fileprivate var composeButton: UIButton = {
         let btn = UIButton()
@@ -32,10 +32,7 @@ class WBTabarViewController: UITabBarController {
         setupComposeButton()
         setupTimer()
         
-        let v = WBNewFeatureView.newFeatureView()
-        // 2. 添加视图
-        view.addSubview(v)
-        
+        setupNewFeatureViews()
         
         NotificationCenter.default.addObserver(self, selector: #selector(userLogin), name: NSNotification.Name(WBUserShouldLoginNotification), object: nil)
     }
@@ -73,7 +70,42 @@ class WBTabarViewController: UITabBarController {
     }
 }
 
-extension WBTabarViewController {
+// MARK: - 新特性视图处理
+extension WBMainViewController {
+    
+    
+    /// 设置新特性视图
+    fileprivate func setupNewFeatureViews() {
+        
+        // 0. 判断是否登录
+        if !WBNetworkManager.shared.userLogon {
+            return
+        }
+        
+        // 1.如果更新，显示新特性，否则显示欢迎
+        let v = isNewVersion ? WBNewFeatureView.newFeatureView() : WBWelcomeView.welcomeView()
+        view.addSubview(v)
+    }
+    
+    fileprivate var isNewVersion: Bool {
+        
+        // 1. 取当前的版本号
+        let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
+        print("当前版本 = \(currentVersion)")
+        
+        // 2. 取保存本地的版本号
+        let path: String = ("version" as NSString).cz_appendDocumentDir()
+        let sanboxVersion = (try? String(contentsOfFile: path)) ?? ""
+        print("沙盒版本 = \(sanboxVersion)")
+        
+        // 3. 将当前版本号保存在沙盒
+        try? currentVersion.write(toFile: path, atomically: true, encoding: .utf8)
+        
+        return currentVersion != sanboxVersion
+    }
+}
+
+extension WBMainViewController {
     
     func setupTimer() {
         timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -94,7 +126,7 @@ extension WBTabarViewController {
     }
 }
 
-extension WBTabarViewController {
+extension WBMainViewController {
     
     fileprivate func setupComposeButton() {
         tabBar.addSubview(composeButton)
