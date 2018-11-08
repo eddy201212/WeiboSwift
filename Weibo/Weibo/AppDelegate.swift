@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func test() {
-    
+        print("hello 11.8")
     }
 
     
