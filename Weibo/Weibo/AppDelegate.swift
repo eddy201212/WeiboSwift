@@ -32,9 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-
     func test() {
-        print("hello 11.8")
+        printLog("hello 11.8")
+    
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
