@@ -1,26 +1,26 @@
 PODS:
-  - Alamofire (4.6.0)
-  - FMDB (2.7.2):
-    - FMDB/standard (= 2.7.2)
-  - FMDB/standard (2.7.2)
-  - Kingfisher (4.6.1)
-  - pop (1.0.10)
-  - SDWebImage (4.2.3):
-    - SDWebImage/Core (= 4.2.3)
-  - SDWebImage/Core (4.2.3)
-  - SnapKit (4.0.0)
-  - SVProgressHUD (2.2.2)
+  - Alamofire (4.7.3)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - Kingfisher (4.10.1)
+  - pop (1.0.12)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - SnapKit (4.2.0)
+  - SVProgressHUD (2.2.5)
   - YYModel (1.0.4)
 
 DEPENDENCIES:
-  - Alamofire
-  - FMDB
-  - Kingfisher
-  - pop
-  - SDWebImage
-  - SnapKit
-  - SVProgressHUD
-  - YYModel
+  - Alamofire (= 4.7.3)
+  - FMDB (= 2.7.5)
+  - Kingfisher (= 4.10.1)
+  - pop (= 1.0.12)
+  - SDWebImage (= 4.4.2)
+  - SnapKit (= 4.2.0)
+  - SVProgressHUD (= 2.2.5)
+  - YYModel (= 1.0.4)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -34,15 +34,15 @@ SPEC REPOS:
     - YYModel
 
 SPEC CHECKSUMS:
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
-  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
-  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
-  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
-  SVProgressHUD: 59b2d3dabacbd051576d21d32293ca7228dc18b0
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 78d576515319c5459ffdd4e834a80e1e44b4b9ab
+PODFILE CHECKSUM: 6639d4327d366c7f99fbf0edfd0fc338d476f480
 
 COCOAPODS: 1.5.3
