@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import SDWebImage
+import Kingfisher
 
 extension UIImageView {
     
@@ -18,9 +18,10 @@ extension UIImageView {
             return
         }
         
-        sd_setImage(with: url, placeholderImage: placeholderImage, options: [], progress: nil) { (image, _, _, _) in
+        kf.setImage(with: url, placeholder: placeholderImage, options: [], progressBlock: nil) { (image, _, _, _) in
             
             if isAvatar {
+                
                 self.image = image?.wb_avatarImage(size: self.bounds.size, lineWidth: 0.5)
             }
         }

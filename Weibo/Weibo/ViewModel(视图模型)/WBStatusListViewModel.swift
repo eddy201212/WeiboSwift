@@ -8,7 +8,6 @@
 
 import Foundation
 import Kingfisher
-import SDWebImage
 
 //微博数据列表视图模型
 
@@ -110,8 +109,8 @@ class WBStatusListViewModel {
             // A> 入组
             group.enter()
             
-            
-            SDWebImageDownloader.shared().downloadImage(with: url, options: [], progress: nil, completed: { (image, data, error, istrue) in
+            ImageDownloader.default.downloadImage(with: url, retrieveImageTask: nil, options: [], progressBlock: nil) { (image, error, url, data) in
+                
                 // 将图像转换成二进制数据
                 if let image = image,
                     let data = UIImagePNGRepresentation(image) {
@@ -127,12 +126,7 @@ class WBStatusListViewModel {
                 
                 // B> 出组 - 放在回调的最后一句
                 group.leave()
-            })
-            
-            //            SDWebImageManager.shared().downloadImage(with: url, options: [], progress: nil, completed: { (image, _, _, _, _) in
-            //
-            //
-            //            })
+            }
         }
         
         // C> 监听调度组情况

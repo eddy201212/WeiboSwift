@@ -46,7 +46,7 @@ class WBWelcomeView: UIView {
         
         // 3. 设置头像 - 如果网络图像没有下载完成，先显示占位图像
         // 如果不指定占位图像，之前设置的图像会被清空！
-        iconView.sd_setImage(with: url, placeholderImage: UIImage(named: "avatar_default_big"), options: [], completed: nil)
+        iconView.kf.setImage(with: url, placeholder: UIImage(named: "avatar_default_big"), options: [], progressBlock: nil, completionHandler: nil)
     }
     
     /// 视图被添加到 window 上，表示视图已经显示

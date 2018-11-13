@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SDWebImage
 
 /**
  如果需要设置可选协议方法
