@@ -31,10 +31,13 @@ let WBStatusPictureViewWidth = UIScreen.main.bounds.width - 2 * WBStatusPictureV
 let WBStatusPictureItemWidth = (WBStatusPictureViewWidth - 2 * WBStatusPictureViewInnerMargin) / 3
 
 let isIphoneX: Bool = UIDevice.current.isIphoneX()
+let isIphoneXR: Bool = UIDevice.current.isIphoneXR()
+let isIphoneX_Max: Bool = UIDevice.current.isIphoneXS_Max()
+let isIphoneX_Series: Bool = UIDevice.current.isIphoneX_Series()
 
-let navigationBarHeight: CGFloat = isIphoneX ? 88 : 64
-let tabBarHeight: CGFloat = isIphoneX ? 83 : 49
-let bottomSafeMargin: CGFloat = isIphoneX ? 34 : 0
+let navigationBarHeight: CGFloat = isIphoneX_Series ? 88 : 64
+let tabBarHeight: CGFloat = isIphoneX_Series ? 83 : 49
+let bottomSafeMargin: CGFloat = isIphoneX_Series ? 34 : 0
 
 let screenWidth: CGFloat = UIScreen.main.bounds.width
 let screenHeight: CGFloat = UIScreen.main.bounds.height
