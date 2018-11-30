@@ -85,6 +85,7 @@
 		64DA1A7420D0FEBB00B5F654 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */; };
 		64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */; };
 		64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */; };
+		8D25F70E21AFF0A200B4492B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D25F70D21AFF0A200B4492B /* Optional+Extension.swift */; };
 		8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */; };
 		8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */; };
 		8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */; };
@@ -186,6 +187,7 @@
 		64DA1A7320D0FEBB00B5F654 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
+		8D25F70D21AFF0A200B4492B /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserController.m; sourceTree = "<group>"; };
 		8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoViewerController.m; sourceTree = "<group>"; };
 		8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserPhotos.m; sourceTree = "<group>"; };
@@ -559,6 +561,7 @@
 				640E1A0B20E4C4B500A2140F /* UIImage+Extension.swift */,
 				64B6AB9520EC6BB3006E6126 /* String+Extension.swift */,
 				64C88CD320EE1964005274BD /* UIDevice+Extension.swift */,
+				8D25F70D21AFF0A200B4492B /* Optional+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -809,6 +812,7 @@
 				64ADAF7620E1E90300146A40 /* WBStatusPicture.swift in Sources */,
 				8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */,
 				64D3B6BE20F6F15E00089D66 /* NSString+CZPath.m in Sources */,
+				8D25F70E21AFF0A200B4492B /* Optional+Extension.swift in Sources */,
 				640E1A1020E4D93E00A2140F /* WBStatusPictureView.swift in Sources */,
 				64D7A58320D25E600017E236 /* UIBarButtonItem+Extension.swift in Sources */,
 			);
