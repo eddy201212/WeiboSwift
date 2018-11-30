@@ -21,7 +21,16 @@ class WBWebViewController: WBBaseViewController {
         }
     }
     
-    lazy var webView = UIWebView(frame: UIScreen.main.bounds)
+    let frame = UIScreen.main.bounds
+    
+    lazy var webView: UIWebView = {
+        let webV = UIWebView()
+        webV.frame = CGRect(x: 0, y: navigationBarHeight, width: screenWidth, height: screenHeight - navigationBarHeight)
+        webV.backgroundColor = UIColor.white
+        webV.isOpaque = false
+        return webV
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +44,5 @@ extension WBWebViewController {
         navItem.title = "网页"
         
         view.insertSubview(webView, belowSubview: navigationBarContainerView)
-        
-        webView.backgroundColor = UIColor.white
-        webView.scrollView.contentInset.top = navigationBarContainerView.bounds.height
     }
 }

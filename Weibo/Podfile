@@ -16,5 +16,6 @@ pod 'Kingfisher', '4.10.1'
 pod 'pop', '1.0.12'
 pod 'FMDB', '2.7.5'
 pod 'SDWebImage', '4.4.2'
+pod 'SKPhotoBrowser', '6.0.0'
 
 end

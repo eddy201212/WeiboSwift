@@ -28,6 +28,8 @@ class WBMainViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tabBar.isTranslucent = false
+        
         setupControllers()
         setupComposeButton()
         setupTimer()

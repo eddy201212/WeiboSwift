@@ -8,6 +8,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SKPhotoBrowser (6.0.0)
   - SnapKit (4.2.0)
   - SVProgressHUD (2.2.5)
   - YYModel (1.0.4)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Kingfisher (= 4.10.1)
   - pop (= 1.0.12)
   - SDWebImage (= 4.4.2)
+  - SKPhotoBrowser (= 6.0.0)
   - SnapKit (= 4.2.0)
   - SVProgressHUD (= 2.2.5)
   - YYModel (= 1.0.4)
@@ -29,6 +31,7 @@ SPEC REPOS:
     - Kingfisher
     - pop
     - SDWebImage
+    - SKPhotoBrowser
     - SnapKit
     - SVProgressHUD
     - YYModel
@@ -39,10 +42,11 @@ SPEC CHECKSUMS:
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
   pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SKPhotoBrowser: 76eb862685761707b5745fde7762757966565e07
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
 
-PODFILE CHECKSUM: 6639d4327d366c7f99fbf0edfd0fc338d476f480
+PODFILE CHECKSUM: 59bc1dba210991fc68a80365536af384ff55e818
 
 COCOAPODS: 1.5.3
