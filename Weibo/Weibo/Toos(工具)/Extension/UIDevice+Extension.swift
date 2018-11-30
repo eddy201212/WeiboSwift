@@ -12,7 +12,7 @@ extension UIDevice {
     
      func isIphoneX() -> Bool {
         
-        if UIScreen.main.bounds.size == CGSize(width: 375, height: 812) {
+        if let size = UIScreen.main.currentMode?.size, size == CGSize(width: 1125, height: 2436) {
             
             return true
         }
@@ -22,7 +22,7 @@ extension UIDevice {
     
     func isIphoneXR() -> Bool {
         
-        if UIScreen.main.bounds.size == CGSize(width: 414, height: 896) {
+        if let size = UIScreen.main.currentMode?.size, size == CGSize(width: 828, height: 1792) {
             
             return true
         }
@@ -32,7 +32,7 @@ extension UIDevice {
     
     func isIphoneXS_Max() -> Bool {
         
-        if UIScreen.main.bounds.size == CGSize(width: 414, height: 896) {
+        if let size = UIScreen.main.currentMode?.size, size == CGSize(width: 1242, height: 2688) {
             
             return true
         }
@@ -44,5 +44,6 @@ extension UIDevice {
     func isIphoneX_Series() -> Bool {
         
         return (isIphoneX() || isIphoneXR() || isIphoneXS_Max())
+    
     }
 }
