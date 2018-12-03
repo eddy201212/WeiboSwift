@@ -78,15 +78,13 @@ class WBHomeViewController: WBBaseViewController, SKPhotoBrowserDelegate {
         }
 
         let image = imageView?.image
-        if let image = image, let imageView = imageView {
-         
-            let browser = SKPhotoBrowser(originImage: image, photos: createWebPhotos(urls), animatedFromView: imageView)
-            
-            browser.initializePageIndex(selectedIndex)
-            browser.delegate = self
-            
-            present(browser, animated: true, completion: nil)
-        }
+        
+        let browser = SKPhotoBrowser(originImage: image ?? UIImage(), photos: createWebPhotos(urls), animatedFromView: imageView ?? UIImageView())
+        
+        browser.initializePageIndex(selectedIndex)
+        browser.delegate = self
+        
+        present(browser, animated: true, completion: nil)
     }
 }
 
