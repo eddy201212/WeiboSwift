@@ -72,11 +72,21 @@ class WBHomeViewController: WBBaseViewController, SKPhotoBrowserDelegate {
         
         imageViewListArray = imageViewList
         
-        let browser = SKPhotoBrowser(photos: createWebPhotos(urls))
-        browser.initializePageIndex(selectedIndex)
-        browser.delegate = self
+        var imageView: UIImageView?
+        if selectedIndex < imageViewListArray.count {
+            imageView = imageViewListArray[selectedIndex]
+        }
 
-        present(browser, animated: true, completion: nil)
+        let image = imageView?.image
+        if let image = image, let imageView = imageView {
+         
+            let browser = SKPhotoBrowser(originImage: image, photos: createWebPhotos(urls), animatedFromView: imageView)
+            
+            browser.initializePageIndex(selectedIndex)
+            browser.delegate = self
+            
+            present(browser, animated: true, completion: nil)
+        }
     }
 }
 
@@ -87,9 +97,7 @@ private extension WBHomeViewController {
         for url in urls {
             
             let photo = SKPhoto.photoWithImageURL(url)
-    
-//            photo.shouldCachePhotoURLImage = true
-            
+            photo.shouldCachePhotoURLImage = true
             photos.append(photo)
         }
         
