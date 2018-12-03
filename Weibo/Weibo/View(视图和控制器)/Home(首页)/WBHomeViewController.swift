@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import SKPhotoBrowser
 
 /// 原创微博可重用 cell id
 private let originalCellId = "originalCellId"
 /// 被转发微博的可重用 cell id
 private let retweetedCellId = "retweetedCellId"
 
-class WBHomeViewController: WBBaseViewController {
+class WBHomeViewController: WBBaseViewController, SKPhotoBrowserDelegate {
 
     /// 列表视图模型
     fileprivate lazy var listViewModel = WBStatusListViewModel()
+    
+    fileprivate var imageViewListArray: [UIImageView] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,10 +70,60 @@ class WBHomeViewController: WBBaseViewController {
             return
         }
         
-        // 2. 展现照片浏览控制器
-        let vc = HMPhotoBrowserController.photoBrowser(withSelectedIndex: selectedIndex, urls: urls, parentImageViews: imageViewList)
-        present(vc, animated: true, completion: nil)
+        imageViewListArray = imageViewList
+        
+        let browser = SKPhotoBrowser(photos: createWebPhotos(urls))
+        browser.initializePageIndex(selectedIndex)
+        browser.delegate = self
+
+        present(browser, animated: true, completion: nil)
     }
+}
+
+private extension WBHomeViewController {
+    func createWebPhotos(_ urls: [String]) -> [SKPhotoProtocol] {
+        
+        var photos: [SKPhotoProtocol] = []
+        for url in urls {
+            
+            let photo = SKPhoto.photoWithImageURL(url)
+    
+//            photo.shouldCachePhotoURLImage = true
+            
+            photos.append(photo)
+        }
+        
+        return photos
+    }
+}
+
+// MARK: - SKPhotoBrowserDelegate
+
+extension WBHomeViewController {
+    func didDismissAtPageIndex(_ index: Int) {
+        
+    }
+    
+    func didDismissActionSheetWithButtonIndex(_ buttonIndex: Int, photoIndex: Int) {
+    }
+    
+    func viewForPhoto(_ browser: SKPhotoBrowser, index: Int) -> UIView? {
+        
+        var view: UIView?
+        
+        if index < imageViewListArray.count {
+            view = imageViewListArray[index]
+        }
+
+        return view
+    }
+    
+//    func removePhoto(index: Int, reload: (() -> Void)) {
+//
+//        SKCache.sharedCache.removeImageForKey("somekey")
+//
+//        reload()
+//    }
 }
 
 // MARK: - 表格数据源方法，具体的数据源方法实现，不需要 super
