@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func test() {
-        printLog("hello 8.18")
+        printLog("hello 11.8")
     
     }
 
