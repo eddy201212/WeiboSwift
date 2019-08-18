@@ -86,6 +86,7 @@
 		64DA1A7620D1006D00B5F654 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */; };
 		64F8F86720E5FF5E00DA60FB /* WBStatusNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */; };
 		8D25F70E21AFF0A200B4492B /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D25F70D21AFF0A200B4492B /* Optional+Extension.swift */; };
+		8D4B448E2309399900750DF8 /* MyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4B448D2309399900750DF8 /* MyTest.swift */; };
 		8D5FBE8220E72E4000B5966D /* HMPhotoBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */; };
 		8D5FBE8320E72E4000B5966D /* HMPhotoViewerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */; };
 		8D5FBE8420E72E4000B5966D /* HMPhotoBrowserPhotos.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */; };
@@ -188,6 +189,7 @@
 		64DA1A7520D1006D00B5F654 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		64F8F86620E5FF5E00DA60FB /* WBStatusNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WBStatusNormalCell.xib; sourceTree = "<group>"; };
 		8D25F70D21AFF0A200B4492B /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		8D4B448D2309399900750DF8 /* MyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTest.swift; sourceTree = "<group>"; };
 		8D5FBE7820E72E4000B5966D /* HMPhotoBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserController.m; sourceTree = "<group>"; };
 		8D5FBE7920E72E4000B5966D /* HMPhotoViewerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoViewerController.m; sourceTree = "<group>"; };
 		8D5FBE7A20E72E4000B5966D /* HMPhotoBrowserPhotos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMPhotoBrowserPhotos.m; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 		64A1118720CFCB46002B7E12 /* Weibo */ = {
 			isa = PBXGroup;
 			children = (
+				8D4B448C2309397F00750DF8 /* Test */,
 				64A1118820CFCB46002B7E12 /* AppDelegate.swift */,
 				8D5FBE8C20E7393600B5966D /* Weibo-Bridge.h */,
 				64D3B6C920F726B400089D66 /* View(视图和控制器) */,
@@ -575,6 +578,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8D4B448C2309397F00750DF8 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				8D4B448D2309399900750DF8 /* MyTest.swift */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		8D5FBE7720E72E4000B5966D /* PhotoBrowser */ = {
 			isa = PBXGroup;
 			children = (
@@ -789,6 +800,7 @@
 				64C88CD420EE1964005274BD /* UIDevice+Extension.swift in Sources */,
 				64DA1A6620D0B87F00B5F654 /* WBComposeViewController.swift in Sources */,
 				641A6C3120E3619900BB07DF /* WBStatusListDAL.swift in Sources */,
+				8D4B448E2309399900750DF8 /* MyTest.swift in Sources */,
 				64D3B6C620F6F94300089D66 /* WBWelcomeView.swift in Sources */,
 				640BC6EC20F4A52D0084B339 /* CZEmoticonToolbar.swift in Sources */,
 				6452797420EF633000E461F1 /* CZEmoticonLayout.swift in Sources */,
