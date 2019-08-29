@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func test() {
-        printLog("hello 888.8")
+        printLog("hello 829829")
     
     }
 
